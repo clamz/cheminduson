@@ -1,0 +1,41 @@
+{% macro notification() %}
+	{% set infosNotifications = app.session.getFlashBag().get('infosNotifications') %}
+	{% for item in infosNotifications %}
+	 {{  _self.info(item) }}
+	{% endfor %}
+	
+	{% set successNotifications = app.session.getFlashBag().get('successNotifications') %}
+	{% for item in successNotifications %}
+	 {{  _self.success(item) }}
+	{% endfor %}
+	
+	{% set warnsNotifications = app.session.getFlashBag().get('warnsNotifications') %}
+	{% for item in warnsNotifications %}
+	 {{  _self.warn(item) }}
+	{% endfor %}
+	
+	{% set errorsNotifications = app.session.getFlashBag().get('errorsNotifications') %}
+	{% for item in errorsNotifications %}
+	 {{  _self.error(item) }}
+	{% endfor %}
+{% endmacro %}
+
+
+{% macro notificationContainer(msg,type) %}
+	<div class="notification {{ type }}">
+		{{ msg|trans }}
+	</div>
+{% endmacro %}
+{% macro info(msg) %}
+	{{ _self.notificationContainer(msg,'info') }}
+{% endmacro %}
+{% macro success(msg) %}
+	{{ _self.notificationContainer(msg,'success') }}
+{% endmacro %}
+{% macro error(msg) %}
+	{{ _self.notificationContainer(msg,'error') }}
+{% endmacro %}
+{% macro warn(msg) %}
+	{{ _self.notificationContainer(msg,'warn') }}
+{% endmacro %}
+

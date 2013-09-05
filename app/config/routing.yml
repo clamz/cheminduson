@@ -1,0 +1,38 @@
+chemin_du_son_user:
+    resource: "@CheminDuSonUserBundle/Resources/config/routing.yml"
+    prefix:   /user
+
+_welcome:
+    pattern:  /
+    defaults: { _controller: CheminDuSonSiteBundle:Accueil:accueil }
+
+chemin_du_son_site:
+    resource: "@CheminDuSonSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+    
+_bazinga_exposetranslation:
+    resource: "@BazingaExposeTranslationBundle/Resources/config/routing/routing.yml"
+
+_assetic:
+    resource: .
+    type:     assetic
+    

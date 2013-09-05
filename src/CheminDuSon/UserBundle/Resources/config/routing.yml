@@ -1,0 +1,12 @@
+chemin_du_son_user_contact_details_update:
+    pattern:  /{slug}/contact-details/update
+    defaults: { _controller: CheminDuSonUserBundle:ContactDetails:update }
+
+chemin_du_son_user_contact_details_update_confirmed:
+    pattern:  /{slug}/contact-details/update/confirmed
+    defaults: { _controller: CheminDuSonUserBundle:ContactDetails:updateConfirmed }
+    
+chemin_du_son_user_contact_details_show:
+    pattern:  /{slug}/contact-details/show
+    defaults: { _controller: CheminDuSonUserBundle:ContactDetails:show }
+    

@@ -1,0 +1,15 @@
+{% extends 'FOSUserBundle::layout.html.twig' %}
+{% trans_default_domain 'CheminDuSonUserBundle' %}
+
+{% block fos_user_content %}
+
+	<ul>
+		<li>{{ user.username }}</li>
+		{% for item in contactDetails %}
+			de de {{ item }}
+		 
+		{% endfor %}
+		<li>{{ contactDetails.address1 }}</li>
+	</ul>
+
+{% endblock %}

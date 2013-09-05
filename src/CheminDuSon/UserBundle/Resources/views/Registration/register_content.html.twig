@@ -1,0 +1,18 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_errors(form) }}
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="form-wizard fos_user_registration_register form-horizontal well">
+	<fieldset title="Étape 1">
+	<legend>Enregistrement:</legend>
+	{{ form_row(form.username) }}
+	{{ form_row(form.email) }}
+	{{ form_row(form.plainPassword) }}
+	</fieldset>
+	<fieldset title="Étape 2">
+	
+	{{ form_rest(form) }}
+	<input type="submit" class="finish"/>
+    <div>
+        
+    </div>
+</form>

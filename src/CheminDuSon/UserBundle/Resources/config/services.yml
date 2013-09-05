@@ -1,0 +1,13 @@
+parameters:
+#    chemin_du_son_user.example.class: CheminDuSon\UserBundle\Example
+    chemin_du_son_user.listener.registration.confirmed: CheminDuSon\UserBundle\EventListener\RegistrationConfirmationListener
+
+services:
+#    chemin_du_son_user.example:
+#        class: %chemin_du_son_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+     chemin_du_son_user.listener.registration.confirmed:
+        class:  %chemin_du_son_user.listener.registration.confirmed%
+        arguments: [@router]
+        tags:
+          - { name: kernel.event_subscriber }

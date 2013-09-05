@@ -1,0 +1,35 @@
+{% block form_row %}
+{% spaceless %}
+    <div class="control-group">
+        {{ form_label(form) }}
+        <div class="controls">       
+        	{{ form_widget(form) }} {{ form_errors(form) }}
+        </div>
+    </div>
+{% endspaceless %}
+{% endblock form_row %}
+
+{% block form_label %}
+{% spaceless %}
+    {% if not compound %}
+        {% set label_attr = label_attr|merge({'for': id}) %}
+    {% endif %}
+    {% if required %}
+        {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %}
+    {% endif %}
+    {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' control-label')|trim}) %}
+    {% if label is empty %}
+        {% set label = name|humanize %}
+    {% endif %}
+    <label{% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>{{ label|trans({}, translation_domain) }}</label>
+{% endspaceless %}
+{% endblock form_label %}
+
+{% block generic_label %} generic label{{ block('form_label') }}{% endblock %}
+
+
+{% block band_widget %}
+    {% spaceless %}
+            {{ block('form_widget_simple') }} <a href="#" class="btn concert-add-band-button"><i class="icon-plus"></i></a>
+    {% endspaceless %}
+{% endblock %}

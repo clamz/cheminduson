@@ -1,0 +1,21 @@
+form:
+    user:
+        contact-details:
+            update:
+                success: Votre profil a été mis à jour
+            adress1:
+                label: Adresse 1
+            adress2:
+                label: Adresse 2
+            phone:
+                label: Téléphone
+            city:
+                label: Ville
+            zipcode:
+                label: Code postal
+            region:
+                label: Région
+            country:
+                label: Pays
+            isPrivate:
+                label: Privée ?

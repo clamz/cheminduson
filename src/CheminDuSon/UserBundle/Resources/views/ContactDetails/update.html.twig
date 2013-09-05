@@ -1,0 +1,18 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% trans_default_domain 'CheminDuSonUserBundle' %}
+
+{% block notification %}
+	{{ parent() }}
+	{% if notificationMsg %}
+		{{ notification.info(notificationMsg) }}
+	{% endif %}
+{% endblock %}
+
+{% block fos_user_content %}
+
+<form action="" method="post" class="form-wizard fos_user_registration_register form-horizontal well" {{ form_enctype(form) }}>
+{{ form_widget(form) }}
+<input type="submit" />
+</form>
+
+{% endblock %}
