@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c52fae1daf42461ba7a1ac576c23d9dd",
+    "hash": "91a42d1bdce33ae8d9ced2ea3700a441",
     "packages": [
         {
             "name": "doctrine/common",
@@ -904,6 +904,107 @@
             "time": "2013-04-23 10:09:48"
         },
         {
+            "name": "mthaml/mthaml",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arnaud-lb/MtHaml.git",
+                "reference": "bc9cf67b5162d9b5dbb4ab13856612703d5f1576"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arnaud-lb/MtHaml/zipball/bc9cf67b5162d9b5dbb4ab13856612703d5f1576",
+                "reference": "bc9cf67b5162d9b5dbb4ab13856612703d5f1576",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "conflict": {
+                "mthaml/mthaml-bundle": "<1.1.0"
+            },
+            "require-dev": {
+                "twig/twig": "~1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MtHaml\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Le Blanc",
+                    "email": "arnaud.lb@gmail.com"
+                }
+            ],
+            "description": "HAML for PHP",
+            "homepage": "https://github.com/arnaud-lb/MtHaml",
+            "keywords": [
+                "HAML"
+            ],
+            "time": "2013-03-29 17:19:34"
+        },
+        {
+            "name": "mthaml/mthaml-bundle",
+            "version": "dev-master",
+            "target-dir": "MtHamlBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arnaud-lb/MtHamlBundle.git",
+                "reference": "79111b65fb5ce19870446a64d8d8d225e05c7163"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arnaud-lb/MtHamlBundle/zipball/79111b65fb5ce19870446a64d8d8d225e05c7163",
+                "reference": "79111b65fb5ce19870446a64d8d8d225e05c7163",
+                "shasum": ""
+            },
+            "require": {
+                "mthaml/mthaml": ">=1.1.0",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "~2.1",
+                "symfony/twig-bundle": "~2.1"
+            },
+            "require-dev": {
+                "sensio/framework-extra-bundle": "~2.1",
+                "symfony/assetic-bundle": "*",
+                "symfony/symfony": "~2.1",
+                "symfony/yaml": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MtHamlBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Le Blanc",
+                    "email": "arnaud.lb@gmail.com"
+                }
+            ],
+            "description": "This Bundle provides a HAML templating engine",
+            "homepage": "https://github.com/arnaud-lb/MtHamlBundle",
+            "keywords": [
+                "HAML"
+            ],
+            "time": "2013-06-29 14:38:40"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.0",
             "source": {
@@ -1688,7 +1789,8 @@
         "knplabs/knp-menu-bundle": 20,
         "elao/web-profiler-extra-bundle": 20,
         "willdurand/expose-translation-bundle": 20,
-        "stof/doctrine-extensions-bundle": 20
+        "stof/doctrine-extensions-bundle": 20,
+        "mthaml/mthaml-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

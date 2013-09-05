@@ -64,3 +64,8 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
+framework:
+    templating:
+        engines: ['haml','twig']
+
+mt_haml:

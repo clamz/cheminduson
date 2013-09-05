@@ -25,7 +25,8 @@
         "genemu/form-bundle": "2.2.*",
         "elao/web-profiler-extra-bundle" : "dev-master",
         "willdurand/expose-translation-bundle": "dev-master",
-        "stof/doctrine-extensions-bundle": "~1.1@dev"
+        "stof/doctrine-extensions-bundle": "~1.1@dev",
+        "mthaml/mthaml-bundle":"dev-master"
         
     },
     

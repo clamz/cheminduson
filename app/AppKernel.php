@@ -23,6 +23,7 @@ class AppKernel extends Kernel
         	new Genemu\Bundle\FormBundle\GenemuFormBundle(),
         	new Bazinga\ExposeTranslationBundle\BazingaExposeTranslationBundle(),
         	new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+        	new MtHamlBundle\MtHamlBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
