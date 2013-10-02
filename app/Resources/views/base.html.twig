@@ -9,9 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-	{% stylesheets 'bundles/chemindusonsite/css/bootstrap.css'
-					'bundles/chemindusonsite/css/my-bootstrap.css'
-					 output="css/compiled/main.css" filter='?yui_css,?cssrewrite' %}
+	{% stylesheets output="css/compiled/main.css" filter='?yui_css,?cssrewrite' %}
 	    <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
 	{% endstylesheets %}
 	{% stylesheets
@@ -27,25 +25,15 @@
    
   </head>
 
-  <body>
-
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">{{ "cheminduson.title" | trans  }}</a>
-          <div class="nav-collapse collapse">
+  <body>    
+        <div class="top-bar">         
+          <a class="site-title-logo" href="#">{{ "cheminduson.title" | trans  }}</a>
+          <div class="navigation-menu">
            {{ knp_menu_render('main',  {'currentClass' : 'active'}) }}
           </div><!--/.nav-collapse -->
         </div>
-      </div>
-    </div>
 
-    <div class="container-fluid">
+    <div class="body">
 	{% block notification %}
 			{{ notification.notification() }}
 	{% endblock %}
@@ -57,7 +45,7 @@
 	{% javascripts
 			'bundles/chemindusonsite/js/jquery-1.10.1.min.js'
 			'bundles/bazingaexposetranslation/js/translator.min.js'
-			'bundles/chemindusonsite/js/bootstrap.js' output="js/compiled/main.js" filter='?yui_js' %}
+			 output="js/compiled/main.js" filter='?yui_js' %}
 	    <script type="text/javascript" src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 

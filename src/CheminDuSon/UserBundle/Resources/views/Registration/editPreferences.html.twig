@@ -2,7 +2,7 @@
 
 {% block fos_user_content %}
 	
-	<form  method="post" class="form-horizontal well" {{ form_enctype(form) }}>
+	<form  method="post" {{ form_enctype(form) }}>
 	    
 		{% for itemForm in form %}
 		{{ form_row(itemForm) }}
