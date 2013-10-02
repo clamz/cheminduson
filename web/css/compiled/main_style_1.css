@@ -1,4 +1,26 @@
-/* line 11, assetic_compassHoxDrx.scss */
+/* line 12, assetic_compass5uJU3P.scss */
+.body {
+  *zoom: 1;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 14, assetic_compass5uJU3P.scss */
+.body form {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 19, assetic_compass5uJU3P.scss */
 div.notification {
   height: 20px;
   padding: 10px;
@@ -20,31 +42,31 @@ div.notification {
   transition-timing-function: ease-in;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-/* line 22, assetic_compassHoxDrx.scss */
+/* line 30, assetic_compass5uJU3P.scss */
 div.notification.info {
   background-color: #b3dbff;
   border: 1px solid #005eb3;
   color: #005eb3;
 }
-/* line 25, assetic_compassHoxDrx.scss */
+/* line 33, assetic_compass5uJU3P.scss */
 div.notification.success {
   background-color: #9af5ac;
   border: 1px solid #0d8324;
   color: #0d8324;
 }
-/* line 29, assetic_compassHoxDrx.scss */
+/* line 37, assetic_compass5uJU3P.scss */
 div.notification.error {
   background-color: #ffbeba;
   border: 1px solid #ba0b00;
   color: #ba0b00;
 }
-/* line 32, assetic_compassHoxDrx.scss */
+/* line 40, assetic_compass5uJU3P.scss */
 div.notification.warn {
   background-color: #fad9a0;
   border: 1px solid #936008;
   color: #936008;
 }
-/* line 36, assetic_compassHoxDrx.scss */
+/* line 44, assetic_compass5uJU3P.scss */
 div.notification:hover {
   -webkit-transform: scale(0.99, 0.99);
   -moz-transform: scale(0.99, 0.99);

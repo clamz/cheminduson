@@ -14,6 +14,8 @@ assetic:
             bin: /home/clamzdev/.rvm/gems/ruby-2.0.0-p247/bin/sass
         compass:
             bin: /home/clamzdev/.rvm/gems/ruby-2.0.0-p247/bin/compass
+            apply_to: "\.scss$"
+            plugins: ["susy"]
         yui_js:
             jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
         yui_css:
