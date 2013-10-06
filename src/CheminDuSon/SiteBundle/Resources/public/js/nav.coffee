@@ -11,16 +11,18 @@ nav.prototype =
         @_initEvents()
     _initEvents: ->
         menuTriggerElt = document.getElementById(@menuTriggerId)
+        siteWrapperElt = document.getElementById(@siteWrapperId);
         menuTriggerElt.addEventListener('click', (ev) =>
             ev.stopPropagation()
             ev.preventDefault()
-            siteWrapperElt = document.getElementById(@siteWrapperId);
-            classie.toggle(siteWrapperElt, @menuOpenClass)
+            @_toggleMenu()
         )
-        $(document).click((event) =>
-            
+        $(document).click((event) =>                    
+            @_toggleMenu() if classie.has(siteWrapperElt, @menuOpenClass)
 
         )   
-
+    _toggleMenu: ->
+        siteWrapperElt = document.getElementById(@siteWrapperId);
+        classie.toggle(siteWrapperElt, @menuOpenClass)
 
 nav()

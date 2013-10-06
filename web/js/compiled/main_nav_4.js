@@ -15,17 +15,25 @@
       return this._initEvents();
     },
     _initEvents: function() {
-      var menuTriggerElt,
+      var menuTriggerElt, siteWrapperElt,
         _this = this;
       menuTriggerElt = document.getElementById(this.menuTriggerId);
+      siteWrapperElt = document.getElementById(this.siteWrapperId);
       menuTriggerElt.addEventListener('click', function(ev) {
-        var siteWrapperElt;
         ev.stopPropagation();
         ev.preventDefault();
-        siteWrapperElt = document.getElementById(_this.siteWrapperId);
-        return classie.toggle(siteWrapperElt, _this.menuOpenClass);
+        return _this._toggleMenu();
       });
-      return $(document).click(function(event) {});
+      return $(document).click(function(event) {
+        if (classie.has(siteWrapperElt, _this.menuOpenClass)) {
+          return _this._toggleMenu();
+        }
+      });
+    },
+    _toggleMenu: function() {
+      var siteWrapperElt;
+      siteWrapperElt = document.getElementById(this.siteWrapperId);
+      return classie.toggle(siteWrapperElt, this.menuOpenClass);
     }
   };
 
