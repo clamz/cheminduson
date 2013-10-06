@@ -1,80 +1,3 @@
-@font-face {
-	font-family: 'cds';
-	src:url('../../../bundles/chemindusonsite/fonts/cds.eot');
-	src:url('../../../bundles/chemindusonsite/fonts/cds.eot?#iefix') format('embedded-opentype'),
-		url('../../../bundles/chemindusonsite/fonts/cds.woff') format('woff'),
-		url('../../../bundles/chemindusonsite/fonts/cds.ttf') format('truetype'),
-		url('../../../bundles/fonts/cds.svg#cds') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'cds';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-cds-"] {
-*/
-.icon-cds-menu, .icon-cds-eye, .icon-cds-arrow-down, .icon-cds-search, .icon-cds-pencil, .icon-cds-remove, .icon-cds-close, .icon-cds-exit, .icon-cds-question, .icon-cds-cog, .icon-cds-users, .icon-cds-home {
-	font-family: 'cds';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-cds-menu:before {
-	content: "\e000";
-}
-.icon-cds-eye:before {
-	content: "\e001";
-}
-.icon-cds-arrow-down:before {
-	content: "\e002";
-}
-.icon-cds-search:before {
-	content: "\e003";
-}
-.icon-cds-pencil:before {
-	content: "\e004";
-}
-.icon-cds-remove:before {
-	content: "\e005";
-}
-.icon-cds-close:before {
-	content: "\e006";
-}
-.icon-cds-exit:before {
-	content: "\e007";
-}
-.icon-cds-question:before {
-	content: "\e008";
-}
-.icon-cds-cog:before {
-	content: "\e009";
-}
-.icon-cds-users:before {
-	content: "\e00a";
-}
-.icon-cds-home:before {
-	content: "\e00b";
-}
-
 @import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic);
 /* line 17, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -152,7 +75,7 @@ html {
   line-height: 0.375em;
 }
 
-/* line 4, assetic_compassvGeQ8l.sass */
+/* line 4, assetic_compasss4jOEV.sass */
 *,
 *:after,
 *::before {
@@ -161,17 +84,17 @@ html {
   box-sizing: border-box;
 }
 
-/* line 12, assetic_compassvGeQ8l.sass */
+/* line 12, assetic_compasss4jOEV.sass */
 html {
   line-height: 1.5em;
 }
 
-/* line 15, assetic_compassvGeQ8l.sass */
+/* line 15, assetic_compasss4jOEV.sass */
 html, body {
   height: 100%;
 }
 
-/* line 18, assetic_compassvGeQ8l.sass */
+/* line 18, assetic_compasss4jOEV.sass */
 .body {
   *zoom: 1;
   padding-left: 1em;
@@ -188,7 +111,7 @@ html, body {
   clear: both;
 }
 
-/* line 23, assetic_compassvGeQ8l.sass */
+/* line 23, assetic_compasss4jOEV.sass */
 a {
   font-family: "Vollkorn", "Helvetica Neue", "Helvetica", sans-serif !important;
   text-decoration: none;
@@ -199,12 +122,12 @@ a {
   transition: color 0.3s ease-in;
   font-size: 1.2em !important;
 }
-/* line 29, assetic_compassvGeQ8l.sass */
+/* line 29, assetic_compasss4jOEV.sass */
 a:hover {
   color: #4e5a7f;
 }
 
-/* line 33, assetic_compassvGeQ8l.sass */
+/* line 33, assetic_compasss4jOEV.sass */
 #site-wrapper {
   -webkit-transition: -webkit-transform 0.3s ease-in;
   -moz-transition: -moz-transform 0.3s ease-in;
@@ -212,7 +135,7 @@ a:hover {
   transition: transform 0.3s ease-in;
   height: 100%;
 }
-/* line 36, assetic_compassvGeQ8l.sass */
+/* line 36, assetic_compasss4jOEV.sass */
 #site-wrapper.menu-open {
   -webkit-transform: translateX(200px);
   -moz-transform: translateX(200px);
@@ -220,12 +143,12 @@ a:hover {
   -o-transform: translateX(200px);
   transform: translateX(200px);
 }
-/* line 38, assetic_compassvGeQ8l.sass */
+/* line 38, assetic_compasss4jOEV.sass */
 #site-wrapper.menu-open nav#navigation-menu {
   opacity: 1;
 }
 
-/* line 41, assetic_compassvGeQ8l.sass */
+/* line 41, assetic_compasss4jOEV.sass */
 div.notification {
   height: 20px;
   padding: 10px;
@@ -247,31 +170,31 @@ div.notification {
   transition-timing-function: ease-in;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-/* line 52, assetic_compassvGeQ8l.sass */
+/* line 52, assetic_compasss4jOEV.sass */
 div.notification.info {
   background-color: #b3dbff;
   border: 1px solid #005eb3;
   color: #005eb3;
 }
-/* line 55, assetic_compassvGeQ8l.sass */
+/* line 55, assetic_compasss4jOEV.sass */
 div.notification.success {
   background-color: #9af5ac;
   border: 1px solid #0d8324;
   color: #0d8324;
 }
-/* line 59, assetic_compassvGeQ8l.sass */
+/* line 59, assetic_compasss4jOEV.sass */
 div.notification.error {
   background-color: #ffbeba;
   border: 1px solid #ba0b00;
   color: #ba0b00;
 }
-/* line 62, assetic_compassvGeQ8l.sass */
+/* line 62, assetic_compasss4jOEV.sass */
 div.notification.warn {
   background-color: #fad9a0;
   border: 1px solid #936008;
   color: #936008;
 }
-/* line 66, assetic_compassvGeQ8l.sass */
+/* line 66, assetic_compasss4jOEV.sass */
 div.notification:hover {
   -webkit-transform: scale(0.99, 0.99);
   -moz-transform: scale(0.99, 0.99);
@@ -280,24 +203,24 @@ div.notification:hover {
   transform: scale(0.99, 0.99);
 }
 
-/* line 69, assetic_compassvGeQ8l.sass */
+/* line 69, assetic_compasss4jOEV.sass */
 div#top-bar {
   background-color: #e6e6e6;
 }
 @media (min-width: 55em) {
-  /* line 69, assetic_compassvGeQ8l.sass */
+  /* line 69, assetic_compasss4jOEV.sass */
   div#top-bar {
     width: 100%;
     height: 54px;
   }
 }
-/* line 74, assetic_compassvGeQ8l.sass */
+/* line 74, assetic_compasss4jOEV.sass */
 div#top-bar span#menu-trigger {
   float: left;
   line-height: 54px;
   color: #272d40;
 }
-/* line 78, assetic_compassvGeQ8l.sass */
+/* line 78, assetic_compasss4jOEV.sass */
 div#top-bar span#menu-trigger i#menu-trigger-icon {
   -webkit-transition: color 0.1s ease-in;
   -moz-transition: color 0.1s ease-in;
@@ -307,31 +230,31 @@ div#top-bar span#menu-trigger i#menu-trigger-icon {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 83, assetic_compassvGeQ8l.sass */
+/* line 83, assetic_compasss4jOEV.sass */
 div#top-bar span#menu-trigger i#menu-trigger-icon:hover {
   color: #4e5a7f;
 }
 @media (min-width: 55em) {
-  /* line 74, assetic_compassvGeQ8l.sass */
+  /* line 74, assetic_compasss4jOEV.sass */
   div#top-bar span#menu-trigger {
     display: none;
   }
 }
-/* line 87, assetic_compassvGeQ8l.sass */
+/* line 87, assetic_compasss4jOEV.sass */
 div#top-bar div#logo-container {
   text-align: center;
 }
 @media (min-width: 55em) {
-  /* line 87, assetic_compassvGeQ8l.sass */
+  /* line 87, assetic_compasss4jOEV.sass */
   div#top-bar div#logo-container {
     float: left;
   }
-  /* line 91, assetic_compassvGeQ8l.sass */
+  /* line 91, assetic_compasss4jOEV.sass */
   div#top-bar div#logo-container:after {
     clear: both;
   }
 }
-/* line 93, assetic_compassvGeQ8l.sass */
+/* line 93, assetic_compasss4jOEV.sass */
 div#top-bar nav#navigation-menu {
   position: absolute;
   top: 0;
@@ -351,34 +274,34 @@ div#top-bar nav#navigation-menu {
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
 }
-/* line 106, assetic_compassvGeQ8l.sass */
+/* line 106, assetic_compasss4jOEV.sass */
 div#top-bar nav#navigation-menu .nav li {
   padding: 0.5em;
   border-bottom: 1px solid #4e5a7f;
 }
 @media (min-width: 55em) {
-  /* line 106, assetic_compassvGeQ8l.sass */
+  /* line 106, assetic_compasss4jOEV.sass */
   div#top-bar nav#navigation-menu .nav li {
     border-bottom: 0;
   }
 }
-/* line 111, assetic_compassvGeQ8l.sass */
+/* line 111, assetic_compasss4jOEV.sass */
 div#top-bar nav#navigation-menu .nav a {
   font-weight: bold;
   color: white;
 }
 @media (min-width: 55em) {
-  /* line 111, assetic_compassvGeQ8l.sass */
+  /* line 111, assetic_compasss4jOEV.sass */
   div#top-bar nav#navigation-menu .nav a {
     color: #272d40;
   }
 }
-/* line 117, assetic_compassvGeQ8l.sass */
+/* line 117, assetic_compasss4jOEV.sass */
 div#top-bar nav#navigation-menu .nav li.active a {
   color: #4e5a7f;
 }
 @media (min-width: 55em) {
-  /* line 105, assetic_compassvGeQ8l.sass */
+  /* line 105, assetic_compasss4jOEV.sass */
   div#top-bar nav#navigation-menu .nav {
     text-align: left;
     margin: 0;
@@ -401,7 +324,7 @@ div#top-bar nav#navigation-menu .nav li.active a {
   }
 }
 @media (min-width: 55em) {
-  /* line 93, assetic_compassvGeQ8l.sass */
+  /* line 93, assetic_compasss4jOEV.sass */
   div#top-bar nav#navigation-menu {
     height: 54px;
     line-height: 54px;
@@ -419,122 +342,7 @@ div#top-bar nav#navigation-menu .nav li.active a {
   }
 }
 
-/* line 134, assetic_compassvGeQ8l.sass */
+/* line 134, assetic_compasss4jOEV.sass */
 .body {
   clear: both;
-}
-
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic);
-/* line 17, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 2, assetic_compassAG0v9B.sass */
-form {
-  background-color: #f3f3f3;
-  border: 1px solid #e4e4e4;
-  margin: auto;
-  padding: 0.8em;
-  width: 25em;
-}
-/* line 9, assetic_compassAG0v9B.sass */
-form div.control-group {
-  margin: 0.5em;
-}
-/* line 11, assetic_compassAG0v9B.sass */
-form legend {
-  color: #aaaaaa;
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-/* line 15, assetic_compassAG0v9B.sass */
-form label {
-  float: left;
-  width: 150px;
-  text-align: right;
-  padding: 0.2em 0.5em 0 0;
-}
-/* line 20, assetic_compassAG0v9B.sass */
-form input {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  box-shadow: 0px;
-  border: 1px solid #cccccc;
-  -webkit-transition: border-color 0.3s, box-shadow;
-  -moz-transition: border-color 0.3s, box-shadow;
-  -o-transition: border-color 0.3s, box-shadow;
-  transition: border-color 0.3s, box-shadow;
-  padding: 0.3em;
-  color: #666666;
-}
-/* line 27, assetic_compassAG0v9B.sass */
-form input:focus {
-  border-color: #0e6d72;
-  -webkit-box-shadow: 0 0 2px #0e6d72 inset;
-  -moz-box-shadow: 0 0 2px #0e6d72 inset;
-  box-shadow: 0 0 2px #0e6d72 inset;
 }

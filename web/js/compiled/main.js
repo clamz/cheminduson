@@ -10,3 +10,118 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
  * MIT Licensed
  */
 var Translator=(function(){var c={},e=/^\w+\: +(.+)$/,d=/^\s*((\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]]))\s?(.+?)$/,h=/^\s*(\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]])/;function f(m,l){var n,j=Translator.placeHolderPrefix,k=Translator.placeHolderSuffix;for(n in l){var o=new RegExp(j+n+k,"g");if(o.test(m)){m=m.replace(o,l[n]);delete (l[n])}}return m}function b(j){var k,l=Translator.defaultDomains;if(Translator.defaultDomains.constructor!=Array){l=[Translator.defaultDomains]}for(k in l){if(Translator.has(l[k]+":"+j)){return Translator.get(l[k]+":"+j)}}return undefined}function g(y,m){var j,r,p=[],v=[],q=y.split(Translator.pluralSeparator),o=[];for(j in q){var u=q[j];var s=new RegExp(d);var x=new RegExp(e);if(s.test(u)){o=u.match(s);p[o[0]]=o[o.length-1]}else{if(x.test(u)){o=u.match(x);v.push(o[1])}else{v.push(u)}}}for(r in p){var w=new RegExp(h);if(w.test(r)){o=r.match(w);if(o[1]){var n=o[2].split(","),k;for(k in n){if(m==n[k]){return p[r]}}}else{var l=i(o[4]);var t=i(o[5]);if(("["===o[3]?m>=l:m>l)&&("]"===o[6]?m<=t:m<t)){return p[r]}}}}return v[a(m)]||undefined}function i(j){if("-Inf"===j){return Math.log(0)}else{if("+Inf"===j||"Inf"===j){return -Math.log(0)}}return parseInt(j,10)}function a(k){var j=Translator.locale||Translator.fallback;if("pt_BR"===j){j="xbr"}if(j.length>3){j=j.split("_")[0]}switch(j){case"bo":case"dz":case"id":case"ja":case"jv":case"ka":case"km":case"kn":case"ko":case"ms":case"th":case"tr":case"vi":case"zh":return 0;case"af":case"az":case"bn":case"bg":case"ca":case"da":case"de":case"el":case"en":case"eo":case"es":case"et":case"eu":case"fa":case"fi":case"fo":case"fur":case"fy":case"gl":case"gu":case"ha":case"he":case"hu":case"is":case"it":case"ku":case"lb":case"ml":case"mn":case"mr":case"nah":case"nb":case"ne":case"nl":case"nn":case"no":case"om":case"or":case"pa":case"pap":case"ps":case"pt":case"so":case"sq":case"sv":case"sw":case"ta":case"te":case"tk":case"ur":case"zu":return(k==1)?0:1;case"am":case"bh":case"fil":case"fr":case"gun":case"hi":case"ln":case"mg":case"nso":case"xbr":case"ti":case"wa":return((k===0)||(k==1))?0:1;case"be":case"bs":case"hr":case"ru":case"sr":case"uk":return((k%10==1)&&(k%100!=11))?0:(((k%10>=2)&&(k%10<=4)&&((k%100<10)||(k%100>=20)))?1:2);case"cs":case"sk":return(k==1)?0:(((k>=2)&&(k<=4))?1:2);case"ga":return(k==1)?0:((k==2)?1:2);case"lt":return((k%10==1)&&(k%100!=11))?0:(((k%10>=2)&&((k%100<10)||(k%100>=20)))?1:2);case"sl":return(k%100==1)?0:((k%100==2)?1:(((k%100==3)||(k%100==4))?2:3));case"mk":return(k%10==1)?0:1;case"mt":return(k==1)?0:(((k===0)||((k%100>1)&&(k%100<11)))?1:(((k%100>10)&&(k%100<20))?2:3));case"lv":return(k===0)?0:(((k%10==1)&&(k%100!=11))?1:2);case"pl":return(k==1)?0:(((k%10>=2)&&(k%10<=4)&&((k%100<12)||(k%100>14)))?1:2);case"cy":return(k==1)?0:((k==2)?1:(((k==8)||(k==11))?2:3));case"ro":return(k==1)?0:(((k===0)||((k%100>0)&&(k%100<20)))?1:2);case"ar":return(k===0)?0:((k==1)?1:((k==2)?2:(((k>=3)&&(k<=10))?3:(((k>=11)&&(k<=99))?4:5))));default:return 0}}return{locale:"",fallback:"en",placeHolderPrefix:"%",placeHolderSuffix:"%",defaultDomains:[],pluralSeparator:"|",add:function(j,k){c[j]=k;return this},get:function(m,j,n){var l=c[m],o=parseInt(n,10),k=j||{};if(l===undefined){l=b(m)}if(l===undefined){l=m}if(l&&!isNaN(o)){l=g(l,o)}l=f(l,k);return l},has:function(j){return(c[j]?true:false)},fromJSON:function(l){if(typeof l==="string"){l=JSON.parse(l)}if(l.locale){this.locale=l.locale}if(l.defaultDomains){this.defaultDomains=l.defaultDomains}if(l.messages){var j;for(j in l.messages){var k=l.messages[j];this.add(j,k)}}return this}}})();if(typeof window.define==="function"&&window.define.amd){window.define("Translator",[],function(){return Translator})};
+/*!
+ * classie - class helper functions
+ * from bonzo https://github.com/ded/bonzo
+ * 
+ * classie.has( elem, 'my-class' ) -> true/false
+ * classie.add( elem, 'my-new-class' )
+ * classie.remove( elem, 'my-unwanted-class' )
+ * classie.toggle( elem, 'my-class' )
+ */
+
+/*jshint browser: true, strict: true, undef: true */
+/*global define: false */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+  hasClass = function( elem, c ) {
+    return elem.classList.contains( c );
+  };
+  addClass = function( elem, c ) {
+    elem.classList.add( c );
+  };
+  removeClass = function( elem, c ) {
+    elem.classList.remove( c );
+  };
+}
+else {
+  hasClass = function( elem, c ) {
+    return classReg( c ).test( elem.className );
+  };
+  addClass = function( elem, c ) {
+    if ( !hasClass( elem, c ) ) {
+      elem.className = elem.className + ' ' + c;
+    }
+  };
+  removeClass = function( elem, c ) {
+    elem.className = elem.className.replace( classReg( c ), ' ' );
+  };
+}
+
+function toggleClass( elem, c ) {
+  var fn = hasClass( elem, c ) ? removeClass : addClass;
+  fn( elem, c );
+}
+
+var classie = {
+  // full names
+  hasClass: hasClass,
+  addClass: addClass,
+  removeClass: removeClass,
+  toggleClass: toggleClass,
+  // short names
+  has: hasClass,
+  add: addClass,
+  remove: removeClass,
+  toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+  // AMD
+  define( classie );
+} else {
+  // browser global
+  window.classie = classie;
+}
+
+})( window );
+
+// Generated by CoffeeScript 1.6.3
+(function() {
+  var nav;
+
+  nav = function() {
+    return nav.prototype._init();
+  };
+
+  nav.prototype = {
+    menuTriggerId: 'menu-trigger',
+    siteWrapperId: 'site-wrapper',
+    navigationMenuId: 'navigation-menu',
+    menuOpenClass: 'menu-open',
+    _init: function() {
+      return this._initEvents();
+    },
+    _initEvents: function() {
+      var menuTriggerElt,
+        _this = this;
+      menuTriggerElt = document.getElementById(this.menuTriggerId);
+      menuTriggerElt.addEventListener('click', function(ev) {
+        var siteWrapperElt;
+        ev.stopPropagation();
+        ev.preventDefault();
+        siteWrapperElt = document.getElementById(_this.siteWrapperId);
+        return classie.toggle(siteWrapperElt, _this.menuOpenClass);
+      });
+      return $(document).click(function(event) {});
+    }
+  };
+
+  nav();
+
+}).call(this);

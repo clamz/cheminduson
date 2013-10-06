@@ -12,7 +12,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic' rel='stylesheet' type='text/css'>	
 	
 	{% stylesheets
-					'bundles/chemindusonsite/scss/style.sass' 'bundles/chemindusonsite/scss/form.sass' output="css/compiled/main.css" filter='?yui_css,?cssrewrite,compass' %}
+					'bundles/chemindusonsite/css/icons.css' 'bundles/chemindusonsite/scss/style.sass' 'bundles/chemindusonsite/scss/form.sass' output="css/compiled/main.css" filter='?yui_css,cssrewrite' %}
 	    <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
 	{% endstylesheets %}
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -24,31 +24,36 @@
    
   </head>
 
-  <body>    
+  <body>
+  	<div id="site-wrapper"> 
         <div id="top-bar">
+          <span id="menu-trigger"><i id="menu-trigger-icon" class="icon-cds-menu"></i></span>
           <div id="logo-container">    
           	<a id="site-title-logo" href="#"><img src="{{ asset('bundles/chemindusonsite/img/logo2.png') }}" title="Chemin du son - logo" /></a>
           </div>
-          <div id="navigation-menu">
+          <nav id="navigation-menu">
            {{ knp_menu_render('main',  {'currentClass' : 'active'}) }}
-          </div><!--/.nav-collapse -->
+          </nav><!--/.nav-collapse -->
         </div>
 
-    <div class="body">
-	{% block notification %}
-			{{ notification.notification() }}
-	{% endblock %}
-    {% block content %}
-    
-    {% endblock content %}
-    </div> <!-- /container -->
-
-	{% javascripts
-			'bundles/chemindusonsite/js/jquery-1.10.1.min.js'
-			'bundles/bazingaexposetranslation/js/translator.min.js'
-			 output="js/compiled/main.js" filter='?yui_js' %}
-	    <script type="text/javascript" src="{{ asset_url }}"></script>
-	{% endjavascripts %}
+	    <div class="body">
+		{% block notification %}
+				{{ notification.notification() }}
+		{% endblock %}
+	    {% block content %}
+	    
+	    {% endblock content %}
+	    </div> <!-- /container -->
+	
+		{% javascripts
+				'bundles/chemindusonsite/js/jquery-1.10.1.min.js'
+				'bundles/bazingaexposetranslation/js/translator.min.js'
+				'bundles/chemindusonsite/js/classie.js'
+				'bundles/chemindusonsite/js/nav.coffee'
+				 output="js/compiled/main.js" filter='?yui_js' %}
+		    <script type="text/javascript" src="{{ asset_url }}"></script>
+		{% endjavascripts %}
+	</div>
 
   </body>
 </html>
