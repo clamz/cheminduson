@@ -16,3 +16,5 @@ web/uploads
 web/media
 app/config/parameters.yml
 watch/
+web/css
+web/js
