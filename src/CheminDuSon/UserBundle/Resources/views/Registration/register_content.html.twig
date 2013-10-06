@@ -3,7 +3,7 @@
 {{ form_errors(form) }}
 <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="form-wizard fos_user_registration_register">
 	<fieldset title="Étape 1">
-	<legend>Enregistrement:</legend>
+	<legend>Enregistrement</legend>
 	{{ form_row(form.username) }}
 	{{ form_row(form.email) }}
 	{{ form_row(form.plainPassword) }}
