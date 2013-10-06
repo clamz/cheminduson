@@ -1,16 +1,20 @@
 @import "base"
 
++establish-baseline
 
+html
+    @include adjust-leading-to(4)
 .body 
     +container
     font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif
     color: $textColor
 
 a
-    font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif
+    font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif !important
     text-decoration: none
     color: $linkColor
     +transition(color 0.3s ease-in)
+    font-size: 1.2em !important
     &:hover
         color: lighten($linkColor, 20%)
     
