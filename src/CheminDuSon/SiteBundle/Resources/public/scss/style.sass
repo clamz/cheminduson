@@ -1,0 +1,67 @@
+@import "base"
+
+
+.body 
+    +container
+    font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif
+    color: $textColor
+
+a
+    font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif
+    text-decoration: none
+    color: $linkColor
+    +transition(color 0.3s ease-in)
+    &:hover
+        color: lighten($linkColor, 20%)
+    
+      
+div.notification
+    height: 20px
+    padding: 10px
+    font-weight: bold
+    font-size: 16px
+    margin: 3px
+    opacity: 1
+    @include transition-property(all)
+    @include transition-duration(0.4s)
+    @include transition-timing-function(ease-in)
+    @include single-text-shadow
+    &.info
+        @include notif-box($infoBackgroundColor)
+    
+    &.success
+        @include notif-box($successBackgroundColor)
+    
+    
+    &.error
+        @include notif-box($errorBackgroundColor)
+    
+    &.warn
+        @include notif-box($warnBackgroundColor)
+    
+    
+    &:hover
+        @include scale(0.99)
+
+div#top-bar
+    background-color: $headerBgColor
+    div#logo-container
+        float: left
+        &:after
+            clear: both
+    div#navigation-menu
+        height: 54px
+        line-height: 54px
+        vertical-align: middle
+        margin: 0 0 0 290px
+        .nav
+            +inline-block-list
+            a
+                font-weight: bold
+            li.active
+                a
+                    color: lighten($linkColor, 20%)
+        
+    
+.body
+    clear: both

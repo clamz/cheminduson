@@ -1,10 +1,78 @@
-/* line 12, assetic_compass5uJU3P.scss */
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic);
+/* line 17, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, assetic_compassy6hANi.sass */
 .body {
   *zoom: 1;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Vollkorn", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #333333;
 }
 /* line 38, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .body:after {
@@ -12,15 +80,23 @@
   display: table;
   clear: both;
 }
-/* line 14, assetic_compass5uJU3P.scss */
-.body form {
-  width: 15.25424%;
-  float: left;
-  margin-right: 1.69492%;
-  display: inline;
+
+/* line 9, assetic_compassy6hANi.sass */
+a {
+  font-family: "Vollkorn", "Helvetica Neue", "Helvetica", sans-serif;
+  text-decoration: none;
+  color: #272d40;
+  -webkit-transition: color 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+/* line 14, assetic_compassy6hANi.sass */
+a:hover {
+  color: #4e5a7f;
 }
 
-/* line 19, assetic_compass5uJU3P.scss */
+/* line 18, assetic_compassy6hANi.sass */
 div.notification {
   height: 20px;
   padding: 10px;
@@ -42,35 +118,89 @@ div.notification {
   transition-timing-function: ease-in;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-/* line 30, assetic_compass5uJU3P.scss */
+/* line 29, assetic_compassy6hANi.sass */
 div.notification.info {
   background-color: #b3dbff;
   border: 1px solid #005eb3;
   color: #005eb3;
 }
-/* line 33, assetic_compass5uJU3P.scss */
+/* line 32, assetic_compassy6hANi.sass */
 div.notification.success {
   background-color: #9af5ac;
   border: 1px solid #0d8324;
   color: #0d8324;
 }
-/* line 37, assetic_compass5uJU3P.scss */
+/* line 36, assetic_compassy6hANi.sass */
 div.notification.error {
   background-color: #ffbeba;
   border: 1px solid #ba0b00;
   color: #ba0b00;
 }
-/* line 40, assetic_compass5uJU3P.scss */
+/* line 39, assetic_compassy6hANi.sass */
 div.notification.warn {
   background-color: #fad9a0;
   border: 1px solid #936008;
   color: #936008;
 }
-/* line 44, assetic_compass5uJU3P.scss */
+/* line 43, assetic_compassy6hANi.sass */
 div.notification:hover {
   -webkit-transform: scale(0.99, 0.99);
   -moz-transform: scale(0.99, 0.99);
   -ms-transform: scale(0.99, 0.99);
   -o-transform: scale(0.99, 0.99);
   transform: scale(0.99, 0.99);
+}
+
+/* line 46, assetic_compassy6hANi.sass */
+div#top-bar {
+  background-color: #e6e6e6;
+}
+/* line 48, assetic_compassy6hANi.sass */
+div#top-bar div#logo-container {
+  float: left;
+}
+/* line 50, assetic_compassy6hANi.sass */
+div#top-bar div#logo-container:after {
+  clear: both;
+}
+/* line 52, assetic_compassy6hANi.sass */
+div#top-bar div#navigation-menu {
+  height: 54px;
+  line-height: 54px;
+  vertical-align: middle;
+  margin: 0 0 0 290px;
+}
+/* line 57, assetic_compassy6hANi.sass */
+div#top-bar div#navigation-menu .nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../home/clamzdev/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
+div#top-bar div#navigation-menu .nav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+/* line 59, assetic_compassy6hANi.sass */
+div#top-bar div#navigation-menu .nav a {
+  font-weight: bold;
+}
+/* line 62, assetic_compassy6hANi.sass */
+div#top-bar div#navigation-menu .nav li.active a {
+  color: #4e5a7f;
+}
+
+/* line 66, assetic_compassy6hANi.sass */
+.body {
+  clear: both;
 }
