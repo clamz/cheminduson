@@ -1,0 +1,11 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% block stylesheets %}
+	{{ parent() }}
+	{% stylesheets
+					'bundles/chemindusonuser/sass/profile.sass' %}
+	    <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
+{% block fos_user_content %}
+{% include "FOSUserBundle:Profile:show_content.html.twig" %}
+{% endblock fos_user_content %}

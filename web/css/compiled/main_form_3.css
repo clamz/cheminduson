@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 2, assetic_compassuMJsqU.sass */
+/* line 2, assetic_compassUv9qKo.sass */
 form {
   background-color: #f3f3f3;
   border: 1px solid #e4e4e4;
@@ -72,24 +72,24 @@ form {
   padding: 0.8em;
   width: 25em;
 }
-/* line 9, assetic_compassuMJsqU.sass */
+/* line 9, assetic_compassUv9qKo.sass */
 form div.control-group {
   margin: 0.5em;
 }
-/* line 11, assetic_compassuMJsqU.sass */
+/* line 11, assetic_compassUv9qKo.sass */
 form legend {
   color: #aaaaaa;
   font-size: 1.2em;
   text-transform: uppercase;
 }
-/* line 15, assetic_compassuMJsqU.sass */
+/* line 15, assetic_compassUv9qKo.sass */
 form label {
   float: left;
   width: 150px;
   text-align: right;
   padding: 0.2em 0.5em 0 0;
 }
-/* line 20, assetic_compassuMJsqU.sass */
+/* line 20, assetic_compassUv9qKo.sass */
 form input {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -105,7 +105,7 @@ form input {
   padding: 0.3em;
   color: #666666;
 }
-/* line 27, assetic_compassuMJsqU.sass */
+/* line 27, assetic_compassUv9qKo.sass */
 form input:focus {
   border-color: #0e6d72;
   -webkit-box-shadow: 0 0 2px #0e6d72 inset;

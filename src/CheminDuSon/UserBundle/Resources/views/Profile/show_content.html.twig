@@ -1,0 +1,13 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+	<div id="user-profile-container">
+		<i id="user-logo" class="icon-cds-user"></i>
+		<div id="user-infos">
+			<ul>
+				<li>{{ user.username }}</li>
+				<li>{{ user.email }}</li>
+			</ul>			
+		</div>
+	</div>
+{% endblock %}

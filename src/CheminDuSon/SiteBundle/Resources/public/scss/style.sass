@@ -39,15 +39,11 @@ a
             opacity: 1
        
 div.notification
-    height: 20px
     padding: 10px
     font-weight: bold
     font-size: 16px
     margin: 3px
     opacity: 1
-    @include transition-property(all)
-    @include transition-duration(0.4s)
-    @include transition-timing-function(ease-in)
     @include single-text-shadow
     &.info
         @include notif-box($infoBackgroundColor)
@@ -62,9 +58,6 @@ div.notification
     &.warn
         @include notif-box($warnBackgroundColor)
     
-    
-    &:hover
-        @include scale(0.99)
 
 div#top-bar
     background-color: $headerBgColor
@@ -127,8 +120,14 @@ div#top-bar
             display: block
             opacity: 1
             +translateX(0)
-            width: 100%
+            width: 70%
             background-color: transparent
+    div#profile-container
+        position: absolute
+        top: 0
+        right: 0
+        line-height: 54px
+        margin: 0 1em
             
     
 .body

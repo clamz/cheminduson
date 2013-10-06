@@ -4,7 +4,7 @@ parameters:
     assetic.filter.compass.http_path:  /images
 
 assetic:
-    bundles: [ CheminDuSonSiteBundle ]
+    bundles: [ CheminDuSonSiteBundle, CheminDuSonUserBundle, FOSUserBundle ]
     filters:
         coffee:
             bin: /usr/local/bin/coffee

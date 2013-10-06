@@ -75,7 +75,7 @@ html {
   line-height: 0.375em;
 }
 
-/* line 4, assetic_compassP86gbQ.sass */
+/* line 4, assetic_compassMxQ1Gu.sass */
 *,
 *:after,
 *::before {
@@ -84,17 +84,17 @@ html {
   box-sizing: border-box;
 }
 
-/* line 12, assetic_compassP86gbQ.sass */
+/* line 12, assetic_compassMxQ1Gu.sass */
 html {
   line-height: 1.5em;
 }
 
-/* line 15, assetic_compassP86gbQ.sass */
+/* line 15, assetic_compassMxQ1Gu.sass */
 html, body {
   height: 100%;
 }
 
-/* line 18, assetic_compassP86gbQ.sass */
+/* line 18, assetic_compassMxQ1Gu.sass */
 .body {
   *zoom: 1;
   padding-left: 1em;
@@ -111,7 +111,7 @@ html, body {
   clear: both;
 }
 
-/* line 23, assetic_compassP86gbQ.sass */
+/* line 23, assetic_compassMxQ1Gu.sass */
 a {
   font-family: "Vollkorn", "Helvetica Neue", "Helvetica", sans-serif !important;
   text-decoration: none;
@@ -122,12 +122,12 @@ a {
   transition: color 0.3s ease-in;
   font-size: 1.2em !important;
 }
-/* line 29, assetic_compassP86gbQ.sass */
+/* line 29, assetic_compassMxQ1Gu.sass */
 a:hover {
   color: #4e5a7f;
 }
 
-/* line 33, assetic_compassP86gbQ.sass */
+/* line 33, assetic_compassMxQ1Gu.sass */
 #site-wrapper {
   -webkit-transition: -webkit-transform 0.3s ease-in;
   -moz-transition: -moz-transform 0.3s ease-in;
@@ -135,7 +135,7 @@ a:hover {
   transition: transform 0.3s ease-in;
   height: 100%;
 }
-/* line 36, assetic_compassP86gbQ.sass */
+/* line 36, assetic_compassMxQ1Gu.sass */
 #site-wrapper.menu-open {
   -webkit-transform: translateX(200px);
   -moz-transform: translateX(200px);
@@ -143,84 +143,63 @@ a:hover {
   -o-transform: translateX(200px);
   transform: translateX(200px);
 }
-/* line 38, assetic_compassP86gbQ.sass */
+/* line 38, assetic_compassMxQ1Gu.sass */
 #site-wrapper.menu-open nav#navigation-menu {
   opacity: 1;
 }
 
-/* line 41, assetic_compassP86gbQ.sass */
+/* line 41, assetic_compassMxQ1Gu.sass */
 div.notification {
-  height: 20px;
   padding: 10px;
   font-weight: bold;
   font-size: 16px;
   margin: 3px;
   opacity: 1;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-/* line 52, assetic_compassP86gbQ.sass */
+/* line 48, assetic_compassMxQ1Gu.sass */
 div.notification.info {
   background-color: #b3dbff;
   border: 1px solid #005eb3;
   color: #005eb3;
 }
-/* line 55, assetic_compassP86gbQ.sass */
+/* line 51, assetic_compassMxQ1Gu.sass */
 div.notification.success {
   background-color: #9af5ac;
   border: 1px solid #0d8324;
   color: #0d8324;
 }
-/* line 59, assetic_compassP86gbQ.sass */
+/* line 55, assetic_compassMxQ1Gu.sass */
 div.notification.error {
   background-color: #ffbeba;
   border: 1px solid #ba0b00;
   color: #ba0b00;
 }
-/* line 62, assetic_compassP86gbQ.sass */
+/* line 58, assetic_compassMxQ1Gu.sass */
 div.notification.warn {
   background-color: #fad9a0;
   border: 1px solid #936008;
   color: #936008;
 }
-/* line 66, assetic_compassP86gbQ.sass */
-div.notification:hover {
-  -webkit-transform: scale(0.99, 0.99);
-  -moz-transform: scale(0.99, 0.99);
-  -ms-transform: scale(0.99, 0.99);
-  -o-transform: scale(0.99, 0.99);
-  transform: scale(0.99, 0.99);
-}
 
-/* line 69, assetic_compassP86gbQ.sass */
+/* line 62, assetic_compassMxQ1Gu.sass */
 div#top-bar {
   background-color: #e6e6e6;
 }
 @media (min-width: 55em) {
-  /* line 69, assetic_compassP86gbQ.sass */
+  /* line 62, assetic_compassMxQ1Gu.sass */
   div#top-bar {
     width: 100%;
     height: 54px;
   }
 }
-/* line 74, assetic_compassP86gbQ.sass */
+/* line 67, assetic_compassMxQ1Gu.sass */
 div#top-bar span#menu-trigger {
   float: left;
   line-height: 54px;
   color: #272d40;
 }
-/* line 78, assetic_compassP86gbQ.sass */
+/* line 71, assetic_compassMxQ1Gu.sass */
 div#top-bar span#menu-trigger i#menu-trigger-icon {
   -webkit-transition: color 0.1s ease-in;
   -moz-transition: color 0.1s ease-in;
@@ -230,31 +209,31 @@ div#top-bar span#menu-trigger i#menu-trigger-icon {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 83, assetic_compassP86gbQ.sass */
+/* line 76, assetic_compassMxQ1Gu.sass */
 div#top-bar span#menu-trigger i#menu-trigger-icon:hover {
   color: #4e5a7f;
 }
 @media (min-width: 55em) {
-  /* line 74, assetic_compassP86gbQ.sass */
+  /* line 67, assetic_compassMxQ1Gu.sass */
   div#top-bar span#menu-trigger {
     display: none;
   }
 }
-/* line 87, assetic_compassP86gbQ.sass */
+/* line 80, assetic_compassMxQ1Gu.sass */
 div#top-bar div#logo-container {
   text-align: center;
 }
 @media (min-width: 55em) {
-  /* line 87, assetic_compassP86gbQ.sass */
+  /* line 80, assetic_compassMxQ1Gu.sass */
   div#top-bar div#logo-container {
     float: left;
   }
-  /* line 91, assetic_compassP86gbQ.sass */
+  /* line 84, assetic_compassMxQ1Gu.sass */
   div#top-bar div#logo-container:after {
     clear: both;
   }
 }
-/* line 93, assetic_compassP86gbQ.sass */
+/* line 86, assetic_compassMxQ1Gu.sass */
 div#top-bar nav#navigation-menu {
   position: absolute;
   top: 0;
@@ -274,34 +253,34 @@ div#top-bar nav#navigation-menu {
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
 }
-/* line 106, assetic_compassP86gbQ.sass */
+/* line 99, assetic_compassMxQ1Gu.sass */
 div#top-bar nav#navigation-menu .nav li {
   padding: 0.5em;
   border-bottom: 1px solid #4e5a7f;
 }
 @media (min-width: 55em) {
-  /* line 106, assetic_compassP86gbQ.sass */
+  /* line 99, assetic_compassMxQ1Gu.sass */
   div#top-bar nav#navigation-menu .nav li {
     border-bottom: 0;
   }
 }
-/* line 111, assetic_compassP86gbQ.sass */
+/* line 104, assetic_compassMxQ1Gu.sass */
 div#top-bar nav#navigation-menu .nav a {
   font-weight: bold;
   color: white;
 }
 @media (min-width: 55em) {
-  /* line 111, assetic_compassP86gbQ.sass */
+  /* line 104, assetic_compassMxQ1Gu.sass */
   div#top-bar nav#navigation-menu .nav a {
     color: #272d40;
   }
 }
-/* line 117, assetic_compassP86gbQ.sass */
+/* line 110, assetic_compassMxQ1Gu.sass */
 div#top-bar nav#navigation-menu .nav li.active a {
   color: #4e5a7f;
 }
 @media (min-width: 55em) {
-  /* line 105, assetic_compassP86gbQ.sass */
+  /* line 98, assetic_compassMxQ1Gu.sass */
   div#top-bar nav#navigation-menu .nav {
     text-align: left;
     margin: 0;
@@ -324,7 +303,7 @@ div#top-bar nav#navigation-menu .nav li.active a {
   }
 }
 @media (min-width: 55em) {
-  /* line 93, assetic_compassP86gbQ.sass */
+  /* line 86, assetic_compassMxQ1Gu.sass */
   div#top-bar nav#navigation-menu {
     height: 54px;
     line-height: 54px;
@@ -337,12 +316,20 @@ div#top-bar nav#navigation-menu .nav li.active a {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
-    width: 100%;
+    width: 70%;
     background-color: transparent;
   }
 }
+/* line 125, assetic_compassMxQ1Gu.sass */
+div#top-bar div#profile-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 54px;
+  margin: 0 1em;
+}
 
-/* line 134, assetic_compassP86gbQ.sass */
+/* line 133, assetic_compassMxQ1Gu.sass */
 .body {
   clear: both;
 }
