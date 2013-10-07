@@ -12,7 +12,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic' rel='stylesheet' type='text/css'>	
 	{% block stylesheets %}
 		{% stylesheets
-						'bundles/chemindusonsite/css/icons.css' 'bundles/chemindusonsite/scss/style.sass' 'bundles/chemindusonsite/scss/form.sass' output="css/compiled/main.css" filter='?yui_css,cssrewrite' %}
+						'bundles/chemindusonsite/css/icons.css' 'bundles/chemindusonsite/css/ui-lightness/jquery-ui.custom.min.css' 'bundles/chemindusonsite/scss/style.sass' 'bundles/chemindusonsite/scss/form.sass' output="css/compiled/main.css" filter='?yui_css,cssrewrite' %}
 		    <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
 		{% endstylesheets %}
 	{% endblock %}
@@ -51,9 +51,11 @@
 	
 		{% javascripts
 				'bundles/chemindusonsite/js/jquery-1.10.1.min.js'
+				'bundles/chemindusonsite/js/jquery-ui.custom.min.js'
 				'bundles/bazingaexposetranslation/js/translator.min.js'
 				'bundles/chemindusonsite/js/classie.js'
 				'bundles/chemindusonsite/js/nav.coffee'
+				'bundles/chemindusonsite/coffee/inline-edit.coffee'
 				 output="js/compiled/main.js" filter='?yui_js' %}
 		    <script type="text/javascript" src="{{ asset_url }}"></script>
 		{% endjavascripts %}
