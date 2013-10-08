@@ -23,19 +23,29 @@ jQuery ($) ->
            @isEdit = true
            iconElt = e.target
            $(iconElt).hide()
-           container = $(iconElt).parent()
-           element = container.find('span')
+           container    = $(iconElt).parent()
+           element      = container.find('span')
            elementValue = element.text()
-           input = $('<input>',
+           input        = $('<input>',
                type: 'text'
                value: elementValue
            )
-           element.html(input)
-           input.focus()
+           input.hide()
+           element.hide('fast', ->
+               element.after(input)
+               input.show('fast')
+               input.focus()
+           )
+           
            input.on('keyup', (e) =>
-             @isEdit=false if (e.which == 13 or e.which ==27)
+             
              element.html(input.val()) if (e.which == 13)
              element.html(elementValue) if (e.which == 27)
+             if (e.which == 13 or e.which ==27)
+                @isEdit=false
+                input.hide('fast', ->
+                    element.show('fast')
+                )
            )
     )
     

@@ -182,17 +182,24 @@ if ( typeof define === 'function' && define.amd ) {
           type: 'text',
           value: elementValue
         });
-        element.html(input);
-        input.focus();
+        input.hide();
+        element.hide('fast', function() {
+          element.after(input);
+          input.show('fast');
+          return input.focus();
+        });
         return input.on('keyup', function(e) {
-          if (e.which === 13 || e.which === 27) {
-            _this.isEdit = false;
-          }
           if (e.which === 13) {
             element.html(input.val());
           }
           if (e.which === 27) {
-            return element.html(elementValue);
+            element.html(elementValue);
+          }
+          if (e.which === 13 || e.which === 27) {
+            _this.isEdit = false;
+            return input.hide('fast', function() {
+              return element.show('fast');
+            });
           }
         });
       }
