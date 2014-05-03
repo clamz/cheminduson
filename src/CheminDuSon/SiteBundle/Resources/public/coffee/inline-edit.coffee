@@ -36,9 +36,9 @@ jQuery ($) ->
                input.show('fast')
                input.focus()
            )
-           
+
            input.on('keyup', (e) =>
-             
+
              element.html(input.val()) if (e.which == 13)
              element.html(elementValue) if (e.which == 27)
              if (e.which == 13 or e.which ==27)
@@ -48,5 +48,5 @@ jQuery ($) ->
                 )
            )
     )
-    
+
     $('.inline-edit').inlineEdit()

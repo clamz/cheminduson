@@ -16,7 +16,7 @@ return isNaN(e)?d:e},f=p(u[0]),g=Math.max(f,p(u[1]||"")),f=s?Math.max(f,s.getFul
  * William DURAND <william.durand1@gmail.com>
  * MIT Licensed
  */
-var Translator=(function(){var c={},e=/^\w+\: +(.+)$/,d=/^\s*((\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]]))\s?(.+?)$/,h=/^\s*(\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]])/;function f(m,l){var n,j=Translator.placeHolderPrefix,k=Translator.placeHolderSuffix;for(n in l){var o=new RegExp(j+n+k,"g");if(o.test(m)){m=m.replace(o,l[n]);delete (l[n])}}return m}function b(j){var k,l=Translator.defaultDomains;if(Translator.defaultDomains.constructor!=Array){l=[Translator.defaultDomains]}for(k in l){if(Translator.has(l[k]+":"+j)){return Translator.get(l[k]+":"+j)}}return undefined}function g(y,m){var j,r,p=[],v=[],q=y.split(Translator.pluralSeparator),o=[];for(j in q){var u=q[j];var s=new RegExp(d);var x=new RegExp(e);if(s.test(u)){o=u.match(s);p[o[0]]=o[o.length-1]}else{if(x.test(u)){o=u.match(x);v.push(o[1])}else{v.push(u)}}}for(r in p){var w=new RegExp(h);if(w.test(r)){o=r.match(w);if(o[1]){var n=o[2].split(","),k;for(k in n){if(m==n[k]){return p[r]}}}else{var l=i(o[4]);var t=i(o[5]);if(("["===o[3]?m>=l:m>l)&&("]"===o[6]?m<=t:m<t)){return p[r]}}}}return v[a(m)]||undefined}function i(j){if("-Inf"===j){return Math.log(0)}else{if("+Inf"===j||"Inf"===j){return -Math.log(0)}}return parseInt(j,10)}function a(k){var j=Translator.locale||Translator.fallback;if("pt_BR"===j){j="xbr"}if(j.length>3){j=j.split("_")[0]}switch(j){case"bo":case"dz":case"id":case"ja":case"jv":case"ka":case"km":case"kn":case"ko":case"ms":case"th":case"tr":case"vi":case"zh":return 0;case"af":case"az":case"bn":case"bg":case"ca":case"da":case"de":case"el":case"en":case"eo":case"es":case"et":case"eu":case"fa":case"fi":case"fo":case"fur":case"fy":case"gl":case"gu":case"ha":case"he":case"hu":case"is":case"it":case"ku":case"lb":case"ml":case"mn":case"mr":case"nah":case"nb":case"ne":case"nl":case"nn":case"no":case"om":case"or":case"pa":case"pap":case"ps":case"pt":case"so":case"sq":case"sv":case"sw":case"ta":case"te":case"tk":case"ur":case"zu":return(k==1)?0:1;case"am":case"bh":case"fil":case"fr":case"gun":case"hi":case"ln":case"mg":case"nso":case"xbr":case"ti":case"wa":return((k===0)||(k==1))?0:1;case"be":case"bs":case"hr":case"ru":case"sr":case"uk":return((k%10==1)&&(k%100!=11))?0:(((k%10>=2)&&(k%10<=4)&&((k%100<10)||(k%100>=20)))?1:2);case"cs":case"sk":return(k==1)?0:(((k>=2)&&(k<=4))?1:2);case"ga":return(k==1)?0:((k==2)?1:2);case"lt":return((k%10==1)&&(k%100!=11))?0:(((k%10>=2)&&((k%100<10)||(k%100>=20)))?1:2);case"sl":return(k%100==1)?0:((k%100==2)?1:(((k%100==3)||(k%100==4))?2:3));case"mk":return(k%10==1)?0:1;case"mt":return(k==1)?0:(((k===0)||((k%100>1)&&(k%100<11)))?1:(((k%100>10)&&(k%100<20))?2:3));case"lv":return(k===0)?0:(((k%10==1)&&(k%100!=11))?1:2);case"pl":return(k==1)?0:(((k%10>=2)&&(k%10<=4)&&((k%100<12)||(k%100>14)))?1:2);case"cy":return(k==1)?0:((k==2)?1:(((k==8)||(k==11))?2:3));case"ro":return(k==1)?0:(((k===0)||((k%100>0)&&(k%100<20)))?1:2);case"ar":return(k===0)?0:((k==1)?1:((k==2)?2:(((k>=3)&&(k<=10))?3:(((k>=11)&&(k<=99))?4:5))));default:return 0}}return{locale:"",fallback:"en",placeHolderPrefix:"%",placeHolderSuffix:"%",defaultDomains:[],pluralSeparator:"|",add:function(j,k){c[j]=k;return this},get:function(m,j,n){var l=c[m],o=parseInt(n,10),k=j||{};if(l===undefined){l=b(m)}if(l===undefined){l=m}if(l&&!isNaN(o)){l=g(l,o)}l=f(l,k);return l},has:function(j){return(c[j]?true:false)},fromJSON:function(l){if(typeof l==="string"){l=JSON.parse(l)}if(l.locale){this.locale=l.locale}if(l.defaultDomains){this.defaultDomains=l.defaultDomains}if(l.messages){var j;for(j in l.messages){var k=l.messages[j];this.add(j,k)}}return this}}})();if(typeof window.define==="function"&&window.define.amd){window.define("Translator",[],function(){return Translator})};
+;var Translator=(function(f,e){var j={},c=[],i=new RegExp(/^\w+\: +(.+)$/),d=new RegExp(/^\s*((\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]]))\s?(.+?)$/),k=new RegExp(/^\s*(\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]])/);function n(s,q){var o,p=Translator.placeHolderPrefix,r=Translator.placeHolderSuffix;for(o in q){var t=new RegExp(p+o+r,"g");if(t.test(s)){s=s.replace(t,q[o])}}return s}function h(r,q,t,v,p){var u=t||v||p,s=q;if(e==j[u]){if(e==j[p]){return r}u=p}if(e===s||null===s){for(var o=0;o<c.length;o++){if(e!=j[u][c[o]]&&e!=j[u][c[o]][r]){s=c[o];break}}}if(e!=j[u][s]&&e!=j[u][s][r]){return j[u][s][r]}return r}function m(w,y,B){var o,x,v=[],u=[],q=w.split(Translator.pluralSeparator),A=[];for(o in q){var p=q[o];if(d.test(p)){A=p.match(d);v[A[0]]=A[A.length-1]}else{if(i.test(p)){A=p.match(i);u.push(A[1])}else{u.push(p)}}}for(x in v){if(k.test(x)){A=x.match(k);if(A[1]){var t=A[2].split(","),s;for(s in t){if(y==t[s]){return v[x]}}}else{var z=l(A[4]);var r=l(A[5]);if(("["===A[3]?y>=z:y>z)&&("]"===A[6]?y<=r:y<r)){return v[x]}}}}return u[g(y,B)]||u[0]||e}function l(o){if("-Inf"===o){return Number.NEGATIVE_INFINITY}else{if("+Inf"===o||"Inf"===o){return Number.POSITIVE_INFINITY}}return parseInt(o,10)}function g(o,p){var q=p;if("pt_BR"===q){q="xbr"}if(q.length>3){q=q.split("_")[0]}switch(q){case"bo":case"dz":case"id":case"ja":case"jv":case"ka":case"km":case"kn":case"ko":case"ms":case"th":case"tr":case"vi":case"zh":return 0;case"af":case"az":case"bn":case"bg":case"ca":case"da":case"de":case"el":case"en":case"eo":case"es":case"et":case"eu":case"fa":case"fi":case"fo":case"fur":case"fy":case"gl":case"gu":case"ha":case"he":case"hu":case"is":case"it":case"ku":case"lb":case"ml":case"mn":case"mr":case"nah":case"nb":case"ne":case"nl":case"nn":case"no":case"om":case"or":case"pa":case"pap":case"ps":case"pt":case"so":case"sq":case"sv":case"sw":case"ta":case"te":case"tk":case"ur":case"zu":return(o==1)?0:1;case"am":case"bh":case"fil":case"fr":case"gun":case"hi":case"ln":case"mg":case"nso":case"xbr":case"ti":case"wa":return((o===0)||(o==1))?0:1;case"be":case"bs":case"hr":case"ru":case"sr":case"uk":return((o%10==1)&&(o%100!=11))?0:(((o%10>=2)&&(o%10<=4)&&((o%100<10)||(o%100>=20)))?1:2);case"cs":case"sk":return(o==1)?0:(((o>=2)&&(o<=4))?1:2);case"ga":return(o==1)?0:((o==2)?1:2);case"lt":return((o%10==1)&&(o%100!=11))?0:(((o%10>=2)&&((o%100<10)||(o%100>=20)))?1:2);case"sl":return(o%100==1)?0:((o%100==2)?1:(((o%100==3)||(o%100==4))?2:3));case"mk":return(o%10==1)?0:1;case"mt":return(o==1)?0:(((o===0)||((o%100>1)&&(o%100<11)))?1:(((o%100>10)&&(o%100<20))?2:3));case"lv":return(o===0)?0:(((o%10==1)&&(o%100!=11))?1:2);case"pl":return(o==1)?0:(((o%10>=2)&&(o%10<=4)&&((o%100<12)||(o%100>14)))?1:2);case"cy":return(o==1)?0:((o==2)?1:(((o==8)||(o==11))?2:3));case"ro":return(o==1)?0:(((o===0)||((o%100>0)&&(o%100<20)))?1:2);case"ar":return(o===0)?0:((o==1)?1:((o==2)?2:(((o>=3)&&(o<=10))?3:(((o>=11)&&(o<=99))?4:5))));default:return 0}}function a(o,q){for(var p=0;p<o.length;p++){if(q===o[p]){return true}}return false}function b(){return f.documentElement.lang}return{locale:b(),fallback:"en",placeHolderPrefix:"%",placeHolderSuffix:"%",defaultDomain:"messages",pluralSeparator:"|",add:function(p,s,o,r){var t=r||this.locale||this.fallback,q=o||this.defaultDomain;if(!j[t]){j[t]={}}if(!j[t][q]){j[t][q]={}}j[t][q][p]=s;if(false===a(c,q)){c.push(q)}return this},trans:function(q,o,p,s){var r=h(q,p,s,this.locale,this.fallback);return n(r,o||{})},transChoice:function(r,t,o,q,u){var s=h(r,q,u,this.locale,this.fallback);var p=parseInt(t,10);if(e!=s&&!isNaN(p)){s=m(s,p,u||this.locale||this.fallback)}return n(s,o||{})},fromJSON:function(o){if(typeof o==="string"){o=JSON.parse(o)}if(o.locale){this.locale=o.locale}if(o.fallback){this.fallback=o.fallback}if(o.defaultDomain){this.defaultDomain=o.defaultDomain}if(o.translations){for(var r in o.translations){for(var q in o.translations[r]){for(var p in o.translations[r][q]){this.add(p,o.translations[r][q][p],q,r)}}}}return this},reset:function(){j={};c=[];this.locale=b()}}})(document,undefined);if(typeof window.define==="function"&&window.define.amd){window.define("Translator",[],function(){return Translator})};
 /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo
@@ -98,7 +98,7 @@ if ( typeof define === 'function' && define.amd ) {
 
 })( window );
 
-// Generated by CoffeeScript 1.6.3
+// Generated by CoffeeScript 1.7.1
 (function() {
   var nav;
 
@@ -115,20 +115,23 @@ if ( typeof define === 'function' && define.amd ) {
       return this._initEvents();
     },
     _initEvents: function() {
-      var menuTriggerElt, siteWrapperElt,
-        _this = this;
+      var menuTriggerElt, siteWrapperElt;
       menuTriggerElt = document.getElementById(this.menuTriggerId);
       siteWrapperElt = document.getElementById(this.siteWrapperId);
-      menuTriggerElt.addEventListener('click', function(ev) {
-        ev.stopPropagation();
-        ev.preventDefault();
-        return _this._toggleMenu();
-      });
-      return $(document).click(function(event) {
-        if (classie.has(siteWrapperElt, _this.menuOpenClass)) {
+      menuTriggerElt.addEventListener('click', (function(_this) {
+        return function(ev) {
+          ev.stopPropagation();
+          ev.preventDefault();
           return _this._toggleMenu();
-        }
-      });
+        };
+      })(this));
+      return $(document).click((function(_this) {
+        return function(event) {
+          if (classie.has(siteWrapperElt, _this.menuOpenClass)) {
+            return _this._toggleMenu();
+          }
+        };
+      })(this));
     },
     _toggleMenu: function() {
       var siteWrapperElt;
@@ -141,7 +144,7 @@ if ( typeof define === 'function' && define.amd ) {
 
 }).call(this);
 
-// Generated by CoffeeScript 1.6.3
+// Generated by CoffeeScript 1.7.1
 (function() {
   jQuery(function($) {
     $.widget("cds.inlineEdit", {
@@ -150,28 +153,30 @@ if ( typeof define === 'function' && define.amd ) {
       },
       isEdit: false,
       _initEvents: function() {
-        var editIcon, element,
-          _this = this;
+        var editIcon, element;
         element = this.element;
         editIcon = $('<i>', {
           "class": 'icon-cds-pencil inline-edit-trigger'
         });
         editIcon.hide();
         element.after(editIcon);
-        element.parent().on('mouseenter', function() {
-          if (!_this.isEdit) {
-            return editIcon.show();
-          }
-        }).on('mouseleave', function() {
+        element.parent().on('mouseenter', (function(_this) {
+          return function() {
+            if (!_this.isEdit) {
+              return editIcon.show();
+            }
+          };
+        })(this)).on('mouseleave', function() {
           return editIcon.hide();
         });
-        return editIcon.on('click', function(e) {
-          return _this._onEdit(e);
-        });
+        return editIcon.on('click', (function(_this) {
+          return function(e) {
+            return _this._onEdit(e);
+          };
+        })(this));
       },
       _onEdit: function(e) {
-        var container, element, elementValue, iconElt, input,
-          _this = this;
+        var container, element, elementValue, iconElt, input;
         this.isEdit = true;
         iconElt = e.target;
         $(iconElt).hide();
@@ -188,20 +193,22 @@ if ( typeof define === 'function' && define.amd ) {
           input.show('fast');
           return input.focus();
         });
-        return input.on('keyup', function(e) {
-          if (e.which === 13) {
-            element.html(input.val());
-          }
-          if (e.which === 27) {
-            element.html(elementValue);
-          }
-          if (e.which === 13 || e.which === 27) {
-            _this.isEdit = false;
-            return input.hide('fast', function() {
-              return element.show('fast');
-            });
-          }
-        });
+        return input.on('keyup', (function(_this) {
+          return function(e) {
+            if (e.which === 13) {
+              element.html(input.val());
+            }
+            if (e.which === 27) {
+              element.html(elementValue);
+            }
+            if (e.which === 13 || e.which === 27) {
+              _this.isEdit = false;
+              return input.hide('fast', function() {
+                return element.show('fast');
+              });
+            }
+          };
+        })(this));
       }
     });
     return $('.inline-edit').inlineEdit();

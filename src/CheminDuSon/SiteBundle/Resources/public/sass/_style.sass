@@ -1,0 +1,135 @@
++establish-baseline
+*,
+*:after,
+*::before
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+
+html
+    @include adjust-leading-to(4)
+
+html, body
+    height: 100%
+
+.body
+    +container
+    font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif
+    color: $textColor
+
+a
+    font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif !important
+    text-decoration: none
+    color: $linkColor1
+    +transition(color 0.3s ease-in)
+    font-size: 1.2em !important
+    &:hover
+        color: lighten($linkColor1, 20%)
+
+
+#site-wrapper
+    +transition(transform 0.3s ease-in)
+    height: 100%
+    &.menu-open
+        +translateX(200px)
+        nav#navigation-menu
+            opacity: 1
+
+div.notification
+    padding: 10px
+    font-weight: bold
+    font-size: 16px
+    margin: 3px
+    opacity: 1
+    @include single-text-shadow
+    &.info
+        @include notif-box($infoBackgroundColor)
+
+    &.success
+        @include notif-box($successBackgroundColor)
+
+
+    &.error
+        @include notif-box($errorBackgroundColor)
+
+    &.warn
+        @include notif-box($warnBackgroundColor)
+
+
+div#top-bar
+    background-color: $headerBgColor
+    +breakpoint($computer)
+        width: 100%
+        height: 54px
+    span#menu-trigger
+        float: left
+        line-height: 54px
+        color: $darkBlue
+        i#menu-trigger-icon
+            +transition(color 0.1s ease-in)
+            font-size: 2em
+            vertical-align: middle
+            cursor: pointer
+            &:hover
+                color: lighten($darkBlue, 20%)
+        +breakpoint($computer)
+            display: none
+    div#logo-container
+        text-align: center
+        +breakpoint($computer)
+            float: left
+            &:after
+                clear: both
+    nav#navigation-menu
+        position: absolute
+        top: 0
+        display: inline-block
+        width: 200px
+        vertical-align: middle
+        opacity: 0
+        height: 100%
+        background-color: $bgNavMenuMobile
+
+        +transition(opacity 0.3s ease-in)
+        +translateX(-100%)
+        .nav
+            li
+                padding: 0.5em
+                border-bottom: 1px solid lighten($bgNavMenuMobile, 20%)
+                +breakpoint($computer)
+                    border-bottom: 0
+            a
+                font-weight: bold
+                color: $colorNavLinkMobile
+                +breakpoint($computer)
+                    color: $colorNavLink
+            li.active
+                a
+                    color: lighten($linkColor1, 20%)
+            +breakpoint($computer)
+                text-align: left
+                +inline-block-list
+        +breakpoint($computer)
+            height: 54px
+            line-height: 54px
+            position: normal
+            margin: 0 0 0 290px
+            display: block
+            opacity: 1
+            +translateX(0)
+            width: 70%
+            background-color: transparent
+    div#profile-container
+        position: absolute
+        top: 0
+        right: 0
+        line-height: 54px
+        margin: 0 1em
+
+.inline-edit-trigger
+    cursor: pointer
+    font-size: 16px
+
+.body
+    clear: both

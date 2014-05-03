@@ -1,0 +1,29 @@
+
+form
+    background-color: #F3F3F3
+    border: 1px solid #E4E4E4
+    margin: auto
+    padding: 0.8em
+    width: 25em
+
+    div.control-group
+        margin: 0.5em
+    legend
+        color: #AAAAAA
+        font-size: 1.2em
+        text-transform: uppercase
+    label
+        float: left
+        width: 150px
+        text-align: right
+        padding: 0.2em 0.5em 0 0
+    input
+        +border-radius(0)
+        box-shadow: 0px
+        border: 1px solid #CCCCCC
+        +transition(border-color 0.3s, box-shadow)
+        padding: 0.3em
+        color: lighten($textColor, 20%)
+        &:focus
+            border-color: #0E6D72
+            +box-shadow(0 0 2px #0E6D72 inset)

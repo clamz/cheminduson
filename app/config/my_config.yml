@@ -11,11 +11,11 @@ assetic:
             node: /usr/local/bin/node
             apply_to: "\.coffee$"
         sass:
-            bin: /home/clamzdev/.rvm/gems/ruby-2.0.0-p247/bin/sass
+            bin: /home/clamzdev/.rvm/gems/ruby-2.1.1/bin/sass
         compass:
-            bin: /home/clamzdev/.rvm/gems/ruby-2.0.0-p247/bin/compass
+            bin: /home/clamzdev/.rvm/gems/ruby-2.1.1/bin/compass
             apply_to: "\.sass$"
-            plugins: ["susy"]
+            plugins: ["breakpoint", "susy"]
         yui_js:
             jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
         yui_css:

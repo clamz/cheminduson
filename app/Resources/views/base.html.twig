@@ -45,18 +45,15 @@
 				{{ notification.notification() }}
 		{% endblock %}
 	    {% block content %}
-	    
+
 	    {% endblock content %}
 	    </div> <!-- /container -->
-	
 		{% javascripts
-				'bundles/chemindusonsite/js/jquery-1.10.1.min.js'
-				'bundles/chemindusonsite/js/jquery-ui.custom.min.js'
-				'bundles/bazingaexposetranslation/js/translator.min.js'
-				'bundles/chemindusonsite/js/classie.js'
-				'bundles/chemindusonsite/js/nav.coffee'
-				'bundles/chemindusonsite/coffee/inline-edit.coffee'
-				 output="js/compiled/main.js" filter='?yui_js' %}
+				'vendor/jquery/jquery.js'
+				'vendor/jqueryui/ui/jquery-ui.js'
+				'vendor/classie/classie.js'
+				'bundles/bazingajstranslation/js/translator.min.js'
+				'build/js/main.js' filter='?yui_js' %}
 		    <script type="text/javascript" src="{{ asset_url }}"></script>
 		{% endjavascripts %}
 	</div>

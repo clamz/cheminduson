@@ -30,7 +30,7 @@ fos_user_change_password:
     prefix: /profile
     
 _bazinga_exposetranslation:
-    resource: "@BazingaExposeTranslationBundle/Resources/config/routing/routing.yml"
+    resource: "@BazingaJsTranslationBundle/Resources/config/routing/routing.yml"
 
 _assetic:
     resource: .

@@ -21,7 +21,7 @@ class AppKernel extends Kernel
             new CheminDuSon\UserBundle\CheminDuSonUserBundle(),
         	new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         	new Genemu\Bundle\FormBundle\GenemuFormBundle(),
-        	new Bazinga\ExposeTranslationBundle\BazingaExposeTranslationBundle(),
+        	new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
         	new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         	new MtHamlBundle\MtHamlBundle(),
         );

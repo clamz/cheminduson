@@ -1,0 +1,27 @@
+{
+  "name": "cheminduson",
+  "version": "0.1.0",
+  "description": "cheminduson ===========",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "^0.7.2",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-coffee": "^0.10.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/clamz/cheminduson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clamz/cheminduson/issues"
+  },
+  "homepage": "https://github.com/clamz/cheminduson"
+}
