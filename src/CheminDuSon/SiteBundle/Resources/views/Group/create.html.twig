@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    {{ form_errors(form) }}
+    {{ form_start(form) }}
+        <legend>Creation d'un groupe</legend>
+        {{ form_row(form.name) }}
+
+        <input type="submit" class="finish"/>
+    {{ form_end(form) }}
+{% endblock content %}

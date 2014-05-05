@@ -1,3 +1,12 @@
 chemin_du_son_site_homepage:
     pattern:  /
     defaults: { _controller: CheminDuSonSiteBundle:Accueil:accueil }
+
+chemin_du_son.group.create:
+    pattern: /group/create
+    defaults: { _controller: CheminDuSonSiteBundle:Group:create }
+
+chemin_du_son.group.show:
+    pattern: /group/show/{slug}
+    defaults: { _controller: CheminDuSonSiteBundle:Group:show }
+

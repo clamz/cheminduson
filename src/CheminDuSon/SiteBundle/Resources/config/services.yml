@@ -1,12 +1,13 @@
 parameters:
 #    chemin_du_son_site.example.class: CheminDuSon\SiteBundle\Example
+    chemin_du_son.form.type.group.class: CheminDuSon\SiteBundle\Form\Type\GroupType
 
 services:
-     chemin_du_son_site.menu_builder:
+    chemin_du_son_site.menu_builder:
         class: CheminDuSon\SiteBundle\Menu\MenuBuilder
         arguments: ["@knp_menu.factory","@security.context"]
 
-     chemin_du_son_site.menu.main:
+    chemin_du_son_site.menu.main:
         class: Knp\Menu\MenuItem # the service definition requires setting the class
         factory_service: chemin_du_son_site.menu_builder
         factory_method: createMainMenu
@@ -14,6 +15,11 @@ services:
         scope: request # needed as we have the request as a dependency here
         tags:
             - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
-     chemin_du_son_site.notification:
+    chemin_du_son_site.notification:
         class: CheminDuSon\SiteBundle\Services\NotificationService
         arguments: ["@session"]
+
+    chemin_du_son.form.type.group:
+        class: %chemin_du_son.form.type.group.class%
+        tags:
+            - { name: form.type, alias: group }
