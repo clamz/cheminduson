@@ -31,6 +31,17 @@ class Concert
     private $slug;
 
     /**
+     *  @ORM\ManyToMany(targetEntity="CheminDuSon\SiteBundle\Entity\Group", cascade={"persist"})
+     *  @ORM\JoinTable(name="cds_concert_group")
+     */
+    private $groups;
+
+    public function __construct()
+    {
+        $this->groups = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
      * Gets the value of id.
      *
      * @return mixed
@@ -100,5 +111,39 @@ class Concert
         $this->slug = $slug;
 
         return $this;
+    }
+
+    /**
+     * Gets the value of groups.
+     *
+     * @return mixed
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+
+    /**
+     * Sets the value of groups.
+     *
+     * @param mixed $groups the groups
+     *
+     * @return self
+     */
+    public function setGroups($groups)
+    {
+        $this->groups = $groups;
+
+        return $this;
+    }
+
+    public function addGroup(\CheminDuSon\SiteBundle\Entity\Group $group)
+    {
+        $this->groups[] = $group;
+    }
+
+    public function removeGroup(\CheminDuSon\SiteBundle\Entity\Group $group)
+    {
+        $this->groups->removeElement($group);
     }
 }

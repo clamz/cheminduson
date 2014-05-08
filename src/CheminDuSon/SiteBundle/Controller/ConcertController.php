@@ -16,12 +16,20 @@ class ConcertController extends Controller
         $form->handleRequest($request);
 
         if($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
             $data = $form->getData();
 
             $concert = new Concert();
             $concert->setName($data->getName());
 
-            $em = $this->getDoctrine()->getManager();
+            $groupIds= $data->getGroups();
+
+            $groupRepo = $em->getRepository('CheminDuSonSiteBundle:Group');
+            foreach(explode(',', $groupIds) as $groupId){
+                $group = $groupRepo->find($groupId);
+
+                $concert->addGroup($group);
+            }
 
             $em->persist($concert);
             $em->flush();

@@ -49,10 +49,13 @@ class GroupController extends Controller
     {
         $query = $request->get('query');
 
-        $repository = $this->getDoctrine()->getRepository('CheminDuSonSiteBundle:Group');
+         /** var FOS\ElasticaBundle\Manager\RepositoryManager */
+        $repositoryManager = $this->get('fos_elastica.manager.orm');
 
-        $groups = $repository->search($query);
+        /** var FOS\ElasticaBundle\Repository */
+        $repository = $repositoryManager->getRepository('CheminDuSonSiteBundle:Group');
 
+        $groups = $repository->findByName($query);
         $data = [];
 
         foreach($groups as $group) {

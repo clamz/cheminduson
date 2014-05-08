@@ -71,3 +71,43 @@ framework:
         engines: ['haml','twig']
 
 mt_haml:
+
+fos_elastica:
+    clients:
+        default: { host: localhost, port: 9200 }
+    serializer:
+        callback_class: FOS\ElasticaBundle\Serializer\Callback
+        serializer: serializer
+    indexes:
+        cds:
+            client: default
+            settings:
+                index:
+                    analysis:
+                        analyzer:
+                            custom_french_analyzer:
+                                type: custom
+                                tokenizer: letter
+                                filter: ["asciifolding", "lowercase", "french_stem", "stop_fr"]
+                        filter:
+                            stop_fr:
+                                type: "stop"
+                                stopwords: ["l", "m", "t", "qu", "n", "s", "j", "d"]
+            types:
+                Group:
+                    mappings:
+                        name : { analyzer: custom_french_analyzer }
+                    persistence:
+                        driver: orm # orm, mongodb, propel are available
+                        model:  CheminDuSon\SiteBundle\Entity\Group
+                        provider: ~
+                        listener: ~
+                        finder: ~
+                        repository: CheminDuSon\SiteBundle\Repository\Elastic\GroupElasticRepository
+                Concert:
+                    mappings: ~
+                    persistence:
+                        driver: orm
+                        model:  CheminDuSon\SiteBundle\Entity\Concert
+                        provider: ~
+                        listener: ~
