@@ -2,17 +2,17 @@
 
 namespace CheminDuSon\SiteBundle\Entity;
 
+
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * @ORM\Entity(repositoryClass="CheminDuSon\SiteBundle\Repository\GroupRepository")
- * @ORM\Table(name="cds_group")
+ * @ORM\Entity
+ * @ORM\Table(name="cds_concert")
  */
-class Group
+class Concert
 {
-
-    /**
+        /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -29,30 +29,6 @@ class Group
      * @ORM\Column(length=128, unique=true)
      */
     private $slug;
-
-    /**
-     * Gets the value of name.
-     *
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Sets the value of name.
-     *
-     * @param mixed $name the name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
 
     /**
      * Gets the value of id.
@@ -79,6 +55,30 @@ class Group
     }
 
     /**
+     * Gets the value of name.
+     *
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Sets the value of name.
+     *
+     * @param mixed $name the name
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
      * Gets the value of slug.
      *
      * @return mixed
@@ -87,7 +87,7 @@ class Group
     {
         return $this->slug;
     }
-    
+
     /**
      * Sets the value of slug.
      *

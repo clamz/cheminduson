@@ -1,6 +1,9 @@
 parameters:
 #    chemin_du_son_site.example.class: CheminDuSon\SiteBundle\Example
     chemin_du_son.form.type.group.class: CheminDuSon\SiteBundle\Form\Type\GroupType
+    chemin_du_son.form.type.concert.class: CheminDuSon\SiteBundle\Form\Type\ConcertType
+    chemin_du_son.form.type.field.select2.class: CheminDuSon\SiteBundle\Form\Type\Field\Select2Type
+    chemin_du_son.form.type.field.group.select.class: CheminDuSon\SiteBundle\Form\Type\Field\GroupSelectType
 
 services:
     chemin_du_son_site.menu_builder:
@@ -23,3 +26,19 @@ services:
         class: %chemin_du_son.form.type.group.class%
         tags:
             - { name: form.type, alias: group }
+
+    chemin_du_son.form.type.concert:
+        class: %chemin_du_son.form.type.concert.class%
+        tags:
+            - { name: form.type, alias: concert }
+            - { name: form.type, alias: concert }
+
+    chemin_du_son.form.type.field.select2:
+        class: %chemin_du_son.form.type.field.select2.class%
+        tags:
+            - { name: form.type, alias: select2 }
+
+    chemin_du_son.form.type.field.group.select:
+        class: %chemin_du_son.form.type.field.group.select.class%
+        tags:
+            - { name: form.type, alias: group_select }

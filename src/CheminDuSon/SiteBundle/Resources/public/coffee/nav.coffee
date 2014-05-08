@@ -12,11 +12,12 @@ nav.prototype =
     _initEvents: ->
         menuTriggerElt = document.getElementById(@menuTriggerId)
         siteWrapperElt = document.getElementById(@siteWrapperId);
-        menuTriggerElt.addEventListener('click', (ev) =>
-            ev.stopPropagation()
-            ev.preventDefault()
-            @_toggleMenu()
-        )
+        if menuTriggerElt
+            menuTriggerElt.addEventListener('click', (ev) =>
+                ev.stopPropagation()
+                ev.preventDefault()
+                @_toggleMenu()
+            )
         $(document).click((event) =>
             @_toggleMenu() if classie.has(siteWrapperElt, @menuOpenClass)
 

@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    {{ form_errors(form) }}
+    {{ form_start(form) }}
+        <legend>Creation d'un concert</legend>
+        {{ form_row(form.name) }}
+        {{ form_row(form.groups) }}
+    {{ form_end(form) }}
+{% endblock content %}

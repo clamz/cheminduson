@@ -2,7 +2,7 @@
 {% spaceless %}
     <div class="control-group">
         {{ form_label(form) }}
-        <div class="controls">       
+        <div class="controls">
         	{{ form_widget(form) }} {{ form_errors(form) }}
         </div>
     </div>
@@ -31,5 +31,53 @@
 {% block band_widget %}
     {% spaceless %}
             {{ block('form_widget_simple') }} <a href="#" class="btn concert-add-band-button"><i class="icon-plus"></i></a>
+    {% endspaceless %}
+{% endblock %}
+
+{% block group_select_widget %}
+    {% spaceless %}
+
+        {{ block('form_widget_simple') }}
+
+        <script type="text/javascript">
+
+        function groupFormatResult(group) {
+            return '<div class="group-result">'+group.name+'</div>'
+        }function groupFormatSelection(group) {
+            return group.name
+        }
+        $('#{{ id }}').select2(
+        {
+            ajax: {
+                url: "{{ path('chemin_du_son.group.find') }}",
+                dataType: 'json',
+                data: function (term, page) {
+                    return {
+                        query: term, // search term
+                    };
+                },
+                results: function (data, page) { // parse the results into the format expected by Select2.
+                    // since we are using custom formatting functions we do not need to alter remote JSON data
+                    return {results: data.data};
+                }
+            },
+
+             initSelection: function(element, callback) {
+                // the input tag has a value attribute preloaded that points to a preselected movie's id
+                // this function resolves that id attribute to an object that select2 can render
+                // using its formatResult renderer - that way the movie name is shown preselected
+                var id=$(element).val();
+           
+            },
+            maximumSelectionSize: 3,
+            dropdownCssClass: "bigdrop",
+            formatResult: groupFormatResult,
+            formatSelection: groupFormatSelection,
+            placeholder: "Search for a group",
+            minimumInputLength: 1,
+            multiple:true,
+            escapeMarkup: function (m) { return m; }
+        });
+        </script>
     {% endspaceless %}
 {% endblock %}

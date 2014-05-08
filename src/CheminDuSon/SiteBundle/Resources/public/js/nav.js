@@ -17,13 +17,15 @@
       var menuTriggerElt, siteWrapperElt;
       menuTriggerElt = document.getElementById(this.menuTriggerId);
       siteWrapperElt = document.getElementById(this.siteWrapperId);
-      menuTriggerElt.addEventListener('click', (function(_this) {
-        return function(ev) {
-          ev.stopPropagation();
-          ev.preventDefault();
-          return _this._toggleMenu();
-        };
-      })(this));
+      if (menuTriggerElt) {
+        menuTriggerElt.addEventListener('click', (function(_this) {
+          return function(ev) {
+            ev.stopPropagation();
+            ev.preventDefault();
+            return _this._toggleMenu();
+          };
+        })(this));
+      }
       return $(document).click((function(_this) {
         return function(event) {
           if (classie.has(siteWrapperElt, _this.menuOpenClass)) {

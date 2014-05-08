@@ -2,9 +2,10 @@
 
 namespace CheminDuSon\SiteBundle\Controller;
 
-use CheminDuSon\SiteBundle\Form\Model\Group;
 use CheminDuSon\SiteBundle\Entity\Group as GroupEntity;
+use CheminDuSon\SiteBundle\Form\Model\Group;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class GroupController extends Controller
@@ -42,5 +43,30 @@ class GroupController extends Controller
         return $this->render('CheminDuSonSiteBundle:Group:show.html.twig', [
             'group' => $group
         ]);
+    }
+
+    public function findAction(Request $request)
+    {
+        $query = $request->get('query');
+
+        $repository = $this->getDoctrine()->getRepository('CheminDuSonSiteBundle:Group');
+
+        $groups = $repository->search($query);
+
+        $data = [];
+
+        foreach($groups as $group) {
+            $data[] = [
+                'id' => $group->getId(),
+                'name' => $group->getName()
+            ];
+        }
+
+        $response = new JsonResponse();
+        $response->setData([
+            'data' => $data
+        ]);
+
+        return $response;
     }
 }

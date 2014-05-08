@@ -1,15 +1,18 @@
 {
-    "name": "chemin-du-son",
-    "version": "0.1.0",
-    "main": "bower.json",
-    "ignore": [
-        "**/*",
-        "node_modules",
-        "components"
-    ],
-    "dependencies": {
-        "jquery": "1.10.0",
-        "jqueryui": "1.10.4",
-        "classie": "1.0.0"
-    }
+  "name": "chemin-du-son",
+  "version": "0.1.0",
+  "main": "bower.json",
+  "ignore": [
+    "**/*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": "1.10.0",
+    "jqueryui": "1.10.4",
+    "classie": "1.0.0"
+  },
+  "devDependencies": {
+    "select2": "~3.4.8"
+  }
 }

@@ -10,3 +10,14 @@ chemin_du_son.group.show:
     pattern: /group/show/{slug}
     defaults: { _controller: CheminDuSonSiteBundle:Group:show }
 
+chemin_du_son.group.find:
+    pattern: /group/find
+    defaults: { _controller: CheminDuSonSiteBundle:Group:find }
+
+chemin_du_son.concert.create:
+    pattern: /concert/create
+    defaults: { _controller: CheminDuSonSiteBundle:Concert:create }
+
+chemin_du_son.concert.show:
+    pattern: /concert/show/{slug}
+    defaults: { _controller: CheminDuSonSiteBundle:Concert:show }
