@@ -28,7 +28,7 @@ class MenuBuilder {
 			$menu->addChild('Connexion', array('route' => 'fos_user_security_login'))->setExtra('translation_domain', $this->transDomain);
 		}
 
-		$menu->addChild('Groupes', array('route' => '_welcome'))->setExtra('translation_domain', $this->transDomain);;
+		$menu->addChild('Groupes', array('route' => 'chemin_du_son.group.list'))->setExtra('translation_domain', $this->transDomain);;
 		$menu->addChild('Concerts', array('route' => '_welcome'))->setExtra('translation_domain', $this->transDomain);;
 		$menu->addChild('Festivals', array('route' => '_welcome'))->setExtra('translation_domain', $this->transDomain);
 		return $menu;

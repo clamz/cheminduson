@@ -31,6 +31,11 @@ class Group
     private $slug;
 
     /**
+    *  @ORM\OneToOne(targetEntity="CheminDuSon\SiteBundle\Entity\Document", cascade={"persist"})
+    */
+    private $image;
+
+    /**
      * Gets the value of name.
      *
      * @return mixed
@@ -87,7 +92,7 @@ class Group
     {
         return $this->slug;
     }
-    
+
     /**
      * Sets the value of slug.
      *
@@ -98,6 +103,30 @@ class Group
     public function setSlug($slug)
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of image.
+     *
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Sets the value of image.
+     *
+     * @param mixed $image the image
+     *
+     * @return self
+     */
+    public function setImage(\CheminDuSon\SiteBundle\Entity\Document $image)
+    {
+        $this->image = $image;
 
         return $this;
     }

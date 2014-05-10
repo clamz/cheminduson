@@ -14,6 +14,10 @@ chemin_du_son.group.find:
     pattern: /group/find
     defaults: { _controller: CheminDuSonSiteBundle:Group:find }
 
+chemin_du_son.group.list:
+    pattern: /group/list
+    defaults: { _controller: CheminDuSonSiteBundle:Group:list }
+
 chemin_du_son.concert.create:
     pattern: /concert/create
     defaults: { _controller: CheminDuSonSiteBundle:Concert:create }

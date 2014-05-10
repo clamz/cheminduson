@@ -2,6 +2,7 @@
 
 namespace CheminDuSon\SiteBundle\Controller;
 
+use CheminDuSon\SiteBundle\Entity\Document;
 use CheminDuSon\SiteBundle\Entity\Group as GroupEntity;
 use CheminDuSon\SiteBundle\Form\Model\Group;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -22,6 +23,14 @@ class GroupController extends Controller
 
             $groupEntity = new GroupEntity();
             $groupEntity->setName($data->getName());
+
+            $document = new Document();
+            $document->setName($data->getName());
+            $document->setFile($data->getImage());
+
+            $document->upload();
+
+            $groupEntity->setImage($document);
 
             $em = $this->getDoctrine()->getManager();
 
@@ -71,5 +80,17 @@ class GroupController extends Controller
         ]);
 
         return $response;
+    }
+
+    public function listAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $groupRepo = $em->getRepository('CheminDuSonSiteBundle:Group');
+
+        $groups = $groupRepo->findAll();
+
+        return $this->render('CheminDuSonSiteBundle:Group:list.html.twig', [
+            'groups' => $groups
+        ]);
     }
 }

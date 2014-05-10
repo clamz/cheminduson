@@ -2,4 +2,7 @@
 
 {% block content %}
     <h1>{{ group.name }}</h1>
+    <div>
+        <img src="{{ asset(group.image.webPath) }}" height="100" />
+    </div>
 {% endblock content %}

@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    <ul id="groups-list">
+        {% for group in groups %}
+            <li class="group-container">
+                <div>
+                    <a href="{{ path('chemin_du_son.group.show', { 'slug' : group.slug }) }}"><img src="{{ asset(group.image.webPath) }}" height="100" /></a>
+                </div>
+                <div><a href="{{ path('chemin_du_son.group.show', { 'slug' : group.slug }) }}">{{ group.name }}</a></div>
+            </li>
+        {% endfor %}
+        <li id="group-add-btn"><a href="{{ path('chemin_du_son.group.create') }}" title="{{ 'group.link.create.title'|trans }}">+</a></li>
+    </ul>
+{% endblock content %}

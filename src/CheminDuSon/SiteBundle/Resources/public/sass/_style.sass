@@ -5,6 +5,8 @@
     -webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     box-sizing: border-box
+    margin: 0
+    padding: 0
 
 
 html
@@ -17,6 +19,9 @@ html, body
     +container
     font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif
     color: $textColor
+    background: none repeat scroll 0 0 #F1F1F1
+    margin: 0.5em
+    padding: 0.5em
 
 a
     font-family: 'Vollkorn', "Helvetica Neue",  "Helvetica", sans-serif !important
@@ -27,6 +32,8 @@ a
     &:hover
         color: lighten($linkColor1, 20%)
 
+ul
+    list-style-type: none
 
 #site-wrapper
     +transition(transform 0.3s ease-in)
@@ -133,3 +140,50 @@ div#top-bar
 
 .body
     clear: both
+
+
+#accueil-concerts-container, #accueil-groups-container
+    clear: both
+    margin: 0 0 0.5em
+
+#accueil-concerts, #accueil-groups
+    margin: 0.5em 0
+
+#accueil-concerts
+    .concert
+        background: none repeat scroll 0 0 #FFFFFF
+        float: left
+        margin: 0.5em
+        padding: 0.5em
+        text-align: center
+    &::after
+        clear: both
+
+#accueil-groups
+    .group-container
+        float: left
+        margin: 0.2em
+        a
+            color: lighten($linkColor1, 20%)
+            &:hover
+                color: $linkColor1
+
+#groups-list
+    .group-container
+        float: left
+        margin: 0.2em
+        a
+            color: lighten($linkColor1, 20%)
+            &:hover
+                color: $linkColor1
+    #group-add-btn
+        color: $darkBlue
+        width: 100px
+        height: 100px
+        line-height: 90px
+        vertical-align: middle
+        border: 0.1em dashed $darkBlue
+        font-weight: bold
+        font-size: 2em
+        text-align: center
+        float: left

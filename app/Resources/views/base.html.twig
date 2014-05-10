@@ -12,7 +12,7 @@
     <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     {% block stylesheets %}
         {% stylesheets
-                        'bundles/chemindusonsite/css/icons.css' 'bundles/chemindusonsite/css/ui-lightness/jquery-ui.custom.min.css' 'bundles/chemindusonsite/scss/style.sass' 'bundles/chemindusonsite/scss/form.sass' 'vendor/select2/select2.css' output="css/compiled/main.css" filter='?yui_css,cssrewrite' %}
+                        'build/css/base.css' 'vendor/select2/select2.css' 'vendor/datetimepicker/jquery.datetimepicker.css' output="css/compiled/main.css" filter='?yui_css,cssrewrite' %}
             <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
         {% endstylesheets %}
     {% endblock %}
@@ -22,9 +22,12 @@
                 'vendor/jqueryui/ui/jquery-ui.js'
                 'vendor/classie/classie.js'
                 'vendor/select2/select2.js'
+                'vendor/datetimepicker/jquery.datetimepicker.js'
                 'bundles/bazingajstranslation/js/translator.min.js'
                 'build/js/inline-edit.js'
-                'build/js/nav.js' %}
+                'build/js/nav.js'
+                'build/js/form.js'
+                 %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

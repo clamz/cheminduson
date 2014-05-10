@@ -5,7 +5,7 @@
     <h2>Groupes : </h2>
     <div>
         {% for group in concert.groups %}
-            <div>{{ group.name }}</div>
+            <div><img src="{{ asset( group.image.webPath) }}" height="100" /><span>{{ group.name }}</span></div>
         {% endfor %}
     </div>
 {% endblock content %}

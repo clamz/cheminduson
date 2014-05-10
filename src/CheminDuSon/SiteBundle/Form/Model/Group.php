@@ -2,10 +2,17 @@
 
 namespace CheminDuSon\SiteBundle\Form\Model;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Group
 {
 
     private $name;
+
+    /**
+     * @Assert\File(maxSize="6000000")
+     */
+    private $image;
 
     /**
      * Gets the value of name.
@@ -27,6 +34,30 @@ class Group
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of image.
+     *
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+    
+    /**
+     * Sets the value of image.
+     *
+     * @param mixed $image the image
+     *
+     * @return self
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
 
         return $this;
     }
