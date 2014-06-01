@@ -22,3 +22,4 @@ node_modules/
 .sass_cache
 *sublime*
 .sass-cache
+.sass-cache/*
