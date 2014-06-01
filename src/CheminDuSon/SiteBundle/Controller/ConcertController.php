@@ -22,10 +22,7 @@ class ConcertController extends Controller
             $concert = new Concert();
             $concert->setName($data->getName());
             $concert->setDate($data->getDate());
-            $concert->setAddress($data->getAddress());
-            $concert->setZipcode($data->getZipcode());
-            $concert->setCity($data->getCity());
-            $concert->setCountry($data->getCountry());
+            $concert->setLocation($data->getLocation());
             $concert->setConcertHall($data->getConcertHall());
 
             $groupIds= $data->getGroups();

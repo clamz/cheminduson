@@ -44,22 +44,7 @@ class Concert
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $address;
-
-    /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $zipcode;
-
-    /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $city;
-
-    /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $country;
+    private $location;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
@@ -187,7 +172,7 @@ class Concert
     {
         return $this->date;
     }
-    
+
     /**
      * Sets the value of date.
      *
@@ -203,102 +188,6 @@ class Concert
     }
 
     /**
-     * Gets the value of address.
-     *
-     * @return mixed
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-    
-    /**
-     * Sets the value of address.
-     *
-     * @param mixed $address the address
-     *
-     * @return self
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of zipcode.
-     *
-     * @return mixed
-     */
-    public function getZipcode()
-    {
-        return $this->zipcode;
-    }
-    
-    /**
-     * Sets the value of zipcode.
-     *
-     * @param mixed $zipcode the zipcode
-     *
-     * @return self
-     */
-    public function setZipcode($zipcode)
-    {
-        $this->zipcode = $zipcode;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of city.
-     *
-     * @return mixed
-     */
-    public function getCity()
-    {
-        return $this->city;
-    }
-    
-    /**
-     * Sets the value of city.
-     *
-     * @param mixed $city the city
-     *
-     * @return self
-     */
-    public function setCity($city)
-    {
-        $this->city = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of country.
-     *
-     * @return mixed
-     */
-    public function getCountry()
-    {
-        return $this->country;
-    }
-    
-    /**
-     * Sets the value of country.
-     *
-     * @param mixed $country the country
-     *
-     * @return self
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-
-        return $this;
-    }
-
-    /**
      * Gets the value of concertHall.
      *
      * @return mixed
@@ -307,7 +196,7 @@ class Concert
     {
         return $this->concertHall;
     }
-    
+
     /**
      * Sets the value of concertHall.
      *
@@ -318,6 +207,30 @@ class Concert
     public function setConcertHall($concertHall)
     {
         $this->concertHall = $concertHall;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of location.
+     *
+     * @return mixed
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * Sets the value of location.
+     *
+     * @param mixed $location the location
+     *
+     * @return self
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
 
         return $this;
     }

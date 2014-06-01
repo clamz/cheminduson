@@ -146,6 +146,9 @@ div#top-bar
     clear: both
     margin: 0 0 0.5em
 
+#accueil-groups-container
+    margin: 0.5em
+
 #accueil-concerts, #accueil-groups
     margin: 0.5em 0
 
@@ -161,21 +164,15 @@ div#top-bar
 
 #accueil-groups
     .group-container
-        float: left
-        margin: 0.2em
-        a
-            color: lighten($linkColor1, 20%)
-            &:hover
-                color: $linkColor1
+        +container-image()
+        .group-legend
+            +image-legend()
 
 #groups-list
     .group-container
-        float: left
-        margin: 0.2em
-        a
-            color: lighten($linkColor1, 20%)
-            &:hover
-                color: $linkColor1
+        +container-image()
+        .group-legend
+            +image-legend()
     #group-add-btn
         color: $darkBlue
         width: 100px
@@ -187,3 +184,23 @@ div#top-bar
         font-size: 2em
         text-align: center
         float: left
+
+#concert-container
+    #concert-title
+        +page-title()
+    #concert-groups-container
+        .group-container
+            +container-image()
+            .group-legend
+                +image-legend()
+
+div#group-information-container
+    div#group-avatar-container
+        height: 300px
+        overflow: hidden
+        img
+            width: 100%
+            -moz-user-select: none
+            -khtml-user-select: none
+            -webkit-user-select: none
+            user-select: none

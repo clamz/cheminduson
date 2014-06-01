@@ -28,7 +28,9 @@
         "stof/doctrine-extensions-bundle": "~1.1@dev",
         "mthaml/mthaml-bundle":"dev-master",
         "jms/serializer-bundle": "0.13.0",
-        "friendsofsymfony/elastica-bundle":"3.0.*"
+        "friendsofsymfony/elastica-bundle":"3.0.*",
+        "egeloen/google-map-bundle": "~2.1",
+        "widop/http-adapter-bundle": "1.1.*"
     },
     "scripts": {
         "post-install-cmd": [

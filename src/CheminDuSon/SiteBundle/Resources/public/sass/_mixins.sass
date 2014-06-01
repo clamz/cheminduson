@@ -1,4 +1,25 @@
-@mixin notif-box($color) 
+@mixin notif-box($color)
     background-color: $color
     border: 1px solid darken($color, 50%)
     color: darken($color, 50%)
+
+@mixin panel()
+
+
+@mixin container-image()
+    +span(1 of 10)
+    img
+        width: 100%
+        height: 100px
+    margin: 0.2em
+    a
+        color: lighten($linkColor1, 20%)
+        &:hover
+            color: $linkColor1
+
+@mixin page-title()
+    margin: 0 0 0.5em
+
+@mixin image-legend()
+    text-align: center
+

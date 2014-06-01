@@ -12,6 +12,9 @@
                         %a(href=path('chemin_du_son.concert.show', { 'slug' : concert.slug }))
                             = concert.name
                     %div
+                        %a(href=path('chemin_du_son.concert.show', { 'slug' : concert.slug }))
+                            %img(src=asset(concert.groups[0].image.webPath) height=60)
+                    %div
                         = concert.date|date('d/m/Y H:i')
     %div#accueil-groups-container
         %h1
@@ -22,8 +25,8 @@
             - for group in groups
                 %li.group-container
                     %a(href=path('chemin_du_son.group.show', { 'slug' : group.slug }))
-                        %img(src=asset(group.image.webPath) height=100)
-                    %div
+                        %img(src=asset(group.image.webPath))
+                    %div.group-legend
                         %a(href=path('chemin_du_son.group.show', { 'slug' : group.slug }))
                             = group.name
 

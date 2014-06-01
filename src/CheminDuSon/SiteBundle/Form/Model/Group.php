@@ -47,7 +47,7 @@ class Group
     {
         return $this->image;
     }
-    
+
     /**
      * Sets the value of image.
      *

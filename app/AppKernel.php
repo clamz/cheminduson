@@ -26,6 +26,8 @@ class AppKernel extends Kernel
         	new MtHamlBundle\MtHamlBundle(),
             new \JMS\SerializerBundle\JMSSerializerBundle(),
             new \FOS\ElasticaBundle\FOSElasticaBundle(),
+            new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
+            new Widop\HttpAdapterBundle\WidopHttpAdapterBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

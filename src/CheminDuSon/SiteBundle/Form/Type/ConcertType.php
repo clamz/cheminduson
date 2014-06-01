@@ -12,21 +12,22 @@ class ConcertType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name')
-            ->add('date', 'datetime', array(
+            ->add('date', 'datetime', [
                 'widget' => 'single_text',
                 'input' => 'datetime',
                 'format' => 'dd/MM/yyyy HH:mm',
-                'attr' => array('class' => 'datetimepicker'),
-                )
-            )
+                'attr' => [ 'class' => 'datetimepicker' ],
+            ])
             ->add('groups', 'group_select')
-            ->add('address')
+
             ->add('concertHall', 'text', [
                 'required' => false
             ])
-            ->add('city')
-            ->add('zipcode')
-            ->add('country')
+
+            ->add('location', 'places_autocomplete', [
+                // Autocomplete language
+                'language' => 'fr',
+            ])
             ->add('send', 'submit');
     }
 
